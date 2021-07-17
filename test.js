@@ -2,6 +2,8 @@
 
 // First, import all the color objects
 
+const assert = require('assert')
+
 const {
     bootstrapMainColors,
     bootstrapUnusedColors,
@@ -70,3 +72,5 @@ if(totalBadColors > 0){
 else{
     console.log(`%c All ${Object.keys(allColors).length} colors are good`,'color:green')
 }
+
+assert.ok(totalBadColors === 0)
