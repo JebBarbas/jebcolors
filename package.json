@@ -4,7 +4,8 @@
   "description": "JebColors is a personal module I made to use easier colors in react-native",
   "main": "index.js",
   "scripts": {
-    "test": "node ./test.js"
+    "test": "node ./test.js",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/JebBarbas/jebcolors/issues"
   },
-  "homepage": "https://github.com/JebBarbas/jebcolors#readme"
+  "homepage": "https://github.com/JebBarbas/jebcolors#readme",
+  "devDependencies": {
+    "standard-version": "^9.3.1"
+  }
 }

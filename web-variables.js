@@ -5,12 +5,23 @@
 
 // Final color variables
 
-const white = "#ffffff"
+// Pinks
+const mediumVioletRed = "#c71585"
+const deepPink = "#ff1493"
+const paleVioletRed = "#db7093"
+const hotPink = "#ff69b4"
+const lightPink = "#ffb6c1"
+const pink = "#ffc0cb"
 
 // Exports
 
 const webMainColors = {
-    white,
+    mediumVioletRed,
+    deepPink,
+    paleVioletRed,
+    hotPink,
+    lightPink,
+    pink,
 }
 
 module.exports = {webMainColors}
