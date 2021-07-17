@@ -1,6 +1,6 @@
 {
   "name": "jebcolors",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JebColors is a personal module I made to use easier colors in react-native",
   "main": "index.js",
   "scripts": {
