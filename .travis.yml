@@ -7,4 +7,4 @@ deploy:
   api_key: $NPM_TOKEN
   on:
     tags: true
-    repo: jebbarbas/jebcolors
+    repo: jebcolors
