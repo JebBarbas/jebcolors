@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/JebBarbas/jebcolors/compare/v1.1.0...v1.1.1) (2021-07-20)
+
+
+### Bug Fixes
+
+* fixed travis deploy ([f62f40e](https://github.com/JebBarbas/jebcolors/commit/f62f40e2b84fabe32e18716963ce639ce947c3a7))
+
 ## [1.1.0](https://github.com/JebBarbas/jebcolors/compare/v1.0.1...v1.1.0) (2021-07-20)
 
 
