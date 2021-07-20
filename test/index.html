@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Jebcolors</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1, h3, div{
+            padding: 1%;
+        }
+    </style>
+</head>
+<body>
+    <noscript>You need to enable javascript to see the colors</noscript>
+    <div id="app"></div>
+    <script>
+        const app = document.querySelector('#app')
+        const main = async () => {
+            try{
+                const result = await fetch('./allColors.json')
+                const allColors = await result.json()
+
+                allColors.forEach(colorObject => {
+                    const _main_div_ = document.createElement('div')
+                    const _name_h1_ = document.createElement('h1')
+                    const _total_h2_ = document.createElement('h3')
+
+                    _name_h1_.innerHTML = colorObject.name
+                    _total_h2_.innerHTML = `${Object.keys(colorObject.colors).length} colors`
+                    _main_div_.append(_name_h1_)
+                    _main_div_.append(_total_h2_)
+
+                    for(color in colorObject.colors){
+                        const _color_div_ = document.createElement('div')
+                        _color_div_.innerHTML = color
+                        _color_div_.style.backgroundColor = colorObject.colors[color]
+
+                        _main_div_.append(_color_div_)
+                    }
+
+                    app.append(_main_div_)
+                })    
+            }
+            catch(err){
+                const _main_div_ = document.createElement('div')
+                const _h1_ = document.createElement('h1')
+                _h1_.innerHTML = `There is no colors in "allColors.json", execute "npm run testandsee" to load all the colors in this file`
+                _main_div_.append(_h1_)
+                app.append(_main_div_)
+            }
+        }
+        main()
+    </script>
+</body>
+</html>

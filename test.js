@@ -3,26 +3,14 @@
 // First, import all the color objects
 
 const assert = require('assert')
+const colors = require('colors')
+const args = require('minimist')(process.argv.slice(2))
+
+const watchcolors = args['watchcolors'] ? true : false
 
 const {
-    bootstrapMainColors,
-    bootstrapUnusedColors,
-    bootstrapGrayColors,
-    jebcMainColors,
-    consoleMainColors,
-    webMainColors,
+    allColors
 } = require('./index')
-
-// Then, use the "..." operator to made an object with ALL the colors (be sure that is not repeated names)
-
-const allColors = {
-    ...bootstrapMainColors,
-    ...bootstrapUnusedColors, 
-    ...bootstrapGrayColors,
-    ...jebcMainColors,
-    ...consoleMainColors,
-    ...webMainColors,
-}
 
 // Function to verify if a color is valid, returns a boolean
 
@@ -34,7 +22,7 @@ const isValidColor = (color, name) => {
     let foundError = false
 
     const error = (toSay = '') => {
-        console.error(`%c Error in color "${name}" (hexcode: ${color}) %c ${toSay}`,'display:block; color:red','display:block; color:red')
+        console.log(`X Error in color "${name}" (hexcode: ${color}): ${toSay}`.red)
     }
 
     if(!color.startsWith('#')){
@@ -57,20 +45,59 @@ const isValidColor = (color, name) => {
     return !foundError
 }
 
-// Iterates the allColors object and verify all the colors
-let totalBadColors = 0
-for(color in allColors){
-    if(!isValidColor(allColors[color],color)){
-        totalBadColors++
+// For saving total colors and total errors
+let globalTotalColors = 0
+let globalTotalBadColors = 0
+let arrayOfObjectsWithError = []
+
+console.log('ℹ Starting Tests ...'.blue)
+console.log('')
+
+// Iterates the allColors array and verify all the inside colors
+allColors.forEach(colorObject => {
+    console.log(`ℹ Testing ${colorObject.name} ...`.blue)
+    let localTotalColors = 0
+    let localTotalBadColors = 0
+    for(color in colorObject.colors){
+        localTotalColors++
+        globalTotalColors++
+        if(!isValidColor(colorObject.colors[color],color)){
+            localTotalBadColors++
+            globalTotalBadColors++
+        }
     }
-}
+    if(localTotalBadColors > 0){
+        console.log(`⚠ Found ${localTotalBadColors} bad color(s) in ${colorObject.name}`.yellow)
+        arrayOfObjectsWithError.push(colorObject.name)
+    }
+    else{
+        console.log(`✔ All ${localTotalColors} colors in ${colorObject.name} passed the test`.green)
+    }
+    console.log('')
+})
 
 // If 1 or more bad colors, say that, if not, all good
-if(totalBadColors > 0){
-    console.error(`%c Found ${totalBadColors} bad color(s)`,'color:red')
+if(globalTotalBadColors > 0){
+    console.log(`X Found ${globalTotalBadColors} bad color(s) in: ${arrayOfObjectsWithError.join()}. Please see your console for more information`.red)
 }
 else{
-    console.log(`%c All ${Object.keys(allColors).length} colors are good`,'color:green')
+    console.log(`✔ All ${globalTotalColors} colors in module passed the test`.green)
 }
 
-assert.ok(totalBadColors === 0)
+assert.ok(globalTotalBadColors === 0)
+
+if(watchcolors){
+    console.log('')
+    const fs = require('fs')
+    try{
+        console.log('ℹ Creating "allColors.json" file ...'.blue)
+        fs.writeFileSync('./test/allColors.json',JSON.stringify(allColors))
+        console.log('✔ "allColors.json" file created'.green)
+
+        console.log('')
+        console.log('ℹ Running "npx serve test" to create a server and see the colors ...'.blue)
+    }
+    catch(err){
+        console.log(`X ${err}`.red)
+    }
+}

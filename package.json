@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node ./test.js",
+    "watchcolors": "node ./test.js --watchcolors && npx serve test",
     "release": "standard-version"
   },
   "repository": {
@@ -24,6 +25,8 @@
   },
   "homepage": "https://github.com/JebBarbas/jebcolors#readme",
   "devDependencies": {
+    "colors": "^1.4.0",
+    "minimist": "^1.2.5",
     "standard-version": "^9.3.1"
   }
 }
