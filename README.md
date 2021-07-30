@@ -123,7 +123,7 @@ The gradients from uiGradients are stored in a file in './gradients/uigradients-
 ### npm run compile
 Is used to compile all the TypeScript files.
 
-### npm run prerelease
+### npm run compileall
 - First, fetches the gradients.
 - Then generates the json of colors (without starting a server).
 - Compiles all the TypeScript in the project.

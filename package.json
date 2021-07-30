@@ -9,7 +9,7 @@
     "watchcolors": "npm run generatejson && npx serve test",
     "getgradients": "tsc ./gradients/getfiles.ts && node ./gradients/getfiles.js",
     "compile": "tsc",
-    "prerelease": "npm run getgradients && npm run generatejson && npm run compile",
+    "compileall": "npm run getgradients && npm run generatejson && npm run compile",
     "release": "standard-version && git push --follow-tags origin main && npm publish"
   },
   "repository": {
