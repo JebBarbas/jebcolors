@@ -1,19 +1,15 @@
 {
   "name": "jebcolors",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "JebColors is a personal module I made to use colors in a easier mode in react-native, stores the hexadecimal values of a lot of colors, like bootstrap colors, console colors or the module own colors.",
   "main": "index.js",
   "scripts": {
     "test": "tsc ./test.ts && node ./test.js",
-    
     "generatejson": "npm run test && tsc ./generatejson.ts && node ./generatejson.js",
-    "watchcolors" : "npm run generatejson && npx serve test",
-
+    "watchcolors": "npm run generatejson && npx serve test",
     "getgradients": "tsc ./gradients/getfiles.ts && node ./gradients/getfiles.js",
-
     "compile": "tsc",
-    
-    "prerelease" : "npm run getgradients && npm run generatejson && npm run compile",
+    "prerelease": "npm run getgradients && npm run generatejson && npm run compile",
     "release": "standard-version && git push --follow-tags origin main && npm publish"
   },
   "repository": {
