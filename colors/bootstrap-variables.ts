@@ -1,9 +1,7 @@
 // In this module I save the bootstrap variables to a better manage
 // src = https://getbootstrap.com/docs/5.0/utilities/colors/
 
-
 // Color variables
-
 const blue = "#0d6efd"
 const indigo = "#6610f2"
 const purple = "#6f42c1"
@@ -16,7 +14,6 @@ const teal = "#20c997"
 const cyan = "#0dcaf0"
 
 // Gray variables
-
 const white = "#ffffff"
 const gray100 = "#f8f9fa"
 const gray200 = "#e9ecef"
@@ -39,9 +36,8 @@ const danger = red
 const light = gray100
 const dark = gray900
 
-// Exportable
-
-const bootstrapMainColors = {
+// Exports
+export const bootstrapMainColors = {
     primary,
     secondary,
     success,
@@ -52,7 +48,7 @@ const bootstrapMainColors = {
     dark,
 }
 
-const bootstrapUnusedColors = {
+export const bootstrapUnusedColors = {
     indigo,
     purple,
     pink,
@@ -62,7 +58,7 @@ const bootstrapUnusedColors = {
     black,
 }
 
-const bootstrapGrayColors = {
+export const bootstrapGrayColors = {
     gray100,
     gray200,
     gray300,
@@ -73,5 +69,3 @@ const bootstrapGrayColors = {
     gray800,
     gray900,
 }
-
-module.exports = {bootstrapMainColors, bootstrapUnusedColors, bootstrapGrayColors}

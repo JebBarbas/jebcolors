@@ -25,34 +25,34 @@
         const app = document.querySelector('#app')
         const main = async () => {
             try{
-                const result = await fetch('./allColors.json')
+                const result = await fetch('./colors.json')
                 const allColors = await result.json()
 
-                allColors.forEach(colorObject => {
+                for(const colorGroup in allColors){
                     const _main_div_ = document.createElement('div')
                     const _name_h1_ = document.createElement('h1')
                     const _total_h2_ = document.createElement('h3')
 
-                    _name_h1_.innerHTML = colorObject.name
-                    _total_h2_.innerHTML = `${Object.keys(colorObject.colors).length} colors`
+                    _name_h1_.innerHTML = colorGroup
+                    _total_h2_.innerHTML = `${Object.keys(allColors[colorGroup]).length} colors`
                     _main_div_.append(_name_h1_)
                     _main_div_.append(_total_h2_)
 
-                    for(color in colorObject.colors){
+                    for(color in allColors[colorGroup]){
                         const _color_div_ = document.createElement('div')
                         _color_div_.innerHTML = color
-                        _color_div_.style.backgroundColor = colorObject.colors[color]
+                        _color_div_.style.backgroundColor = allColors[colorGroup][color]
 
                         _main_div_.append(_color_div_)
                     }
 
                     app.append(_main_div_)
-                })    
+                }  
             }
             catch(err){
                 const _main_div_ = document.createElement('div')
                 const _h1_ = document.createElement('h1')
-                _h1_.innerHTML = `There is no colors in "allColors.json", execute "npm run testandsee" to load all the colors in this file`
+                _h1_.innerHTML = `There is no colors in "colors.json", execute "npm run generatejson" to load all the colors in this file`
                 _main_div_.append(_h1_)
                 app.append(_main_div_)
             }

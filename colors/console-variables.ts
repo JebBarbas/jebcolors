@@ -2,7 +2,6 @@
 // src = https://en.wikipedia.org/wiki/Web_colors
 
 // Final color variables
-
 const white = "#ffffff"
 const silver = "#c0c0c0"
 const gray = "#808080"
@@ -21,8 +20,7 @@ const fuchsia = "#ff00ff"
 const purple = "#800080"
 
 // Exports 
-
-const consoleMainColors = {
+export const consoleMainColors = {
     white,
     silver,
     gray,
@@ -40,5 +38,3 @@ const consoleMainColors = {
     fuchsia,
     purple,
 }
-
-module.exports = {consoleMainColors}

@@ -1,85 +1,19 @@
-// Principal module
-
+"use strict";
+// Principal module (exports colors)
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.languageMainColors = exports.socialMainColors = exports.webMainColors = exports.consoleMainColors = exports.jebcMainColors = exports.bootstrapUnusedColors = exports.bootstrapMainColors = exports.bootstrapGrayColors = void 0;
 // Imports
-
-const {
-    bootstrapMainColors,
-    bootstrapUnusedColors,
-    bootstrapGrayColors,
-} = require('./bootstrap-variables')
-
-const {
-    jebcMainColors,
-} = require('./jebc-variables')
-
-const {
-    consoleMainColors
-} = require('./console-variables')
-
-const {
-    webMainColors
-} = require('./web-variables')
-
-const {
-    brandBankColors,
-    brandCarColors,
-    brandFoodColors,
-    brandMarketColors,
-    brandPatentedColors,
-    brandSocialColors,
-    brandTechColors,
-    brandWebAndBrandColors
-} = require('./brand-variables')
-
-const {
-    languageMainColors,
-} = require('./language-variables')
-
-// Creation of an array with all the colorObjects.
-// This is used in the script "npm test" or if you want to iterate all the colors.
-// If you create a new colorObject (like bootstrapMainColors or jebcMainColors), put it here with a name and the imported colorObject (see examples)
-
-const allColors = [
-    {name: "Bootstrap Main Colors", colors: bootstrapMainColors},
-    {name: "Bootstrap Unused Colors", colors: bootstrapUnusedColors},
-    {name: "Bootstrap Gray Colors", colors: bootstrapGrayColors},
-
-    {name: "JebColors Main Colors", colors: jebcMainColors},
-
-    {name: "Console Main Colors", colors: consoleMainColors},
-
-    {name: "Web Main Colors", colors: webMainColors},
-
-    {name: "Brand Bank Colors", colors: brandBankColors},
-    {name: "Brand Car Colors", colors: brandCarColors},
-    {name: "Brand Food Colors", colors: brandFoodColors},
-    {name: "Brand Market Colors", colors: brandMarketColors},
-    {name: "Brand Patented Colors", colors: brandPatentedColors},
-    {name: "Brand Social Colors", colors: brandSocialColors},
-    {name: "Brand Tech Colors", colors: brandTechColors},
-    {name: "Brand Web And Brand Colors", colors: brandWebAndBrandColors},
-
-    {name: "Language Main Colors", colors: languageMainColors},
-    // {name: "Testing Name", colors: importedColors},
-]
-
-// Exports
-
-module.exports = {
-    bootstrapMainColors,
-    bootstrapUnusedColors,
-    bootstrapGrayColors,
-    jebcMainColors,
-    consoleMainColors,
-    webMainColors,
-    brandBankColors,
-    brandCarColors,
-    brandFoodColors,
-    brandMarketColors,
-    brandPatentedColors,
-    brandSocialColors,
-    brandTechColors,
-    brandWebAndBrandColors,
-    languageMainColors,
-    allColors
-}
+var bootstrap_variables_1 = require("./colors/bootstrap-variables");
+Object.defineProperty(exports, "bootstrapMainColors", { enumerable: true, get: function () { return bootstrap_variables_1.bootstrapMainColors; } });
+Object.defineProperty(exports, "bootstrapUnusedColors", { enumerable: true, get: function () { return bootstrap_variables_1.bootstrapUnusedColors; } });
+Object.defineProperty(exports, "bootstrapGrayColors", { enumerable: true, get: function () { return bootstrap_variables_1.bootstrapGrayColors; } });
+var jebc_variables_1 = require("./colors/jebc-variables");
+Object.defineProperty(exports, "jebcMainColors", { enumerable: true, get: function () { return jebc_variables_1.jebcMainColors; } });
+var console_variables_1 = require("./colors/console-variables");
+Object.defineProperty(exports, "consoleMainColors", { enumerable: true, get: function () { return console_variables_1.consoleMainColors; } });
+var web_variables_1 = require("./colors/web-variables");
+Object.defineProperty(exports, "webMainColors", { enumerable: true, get: function () { return web_variables_1.webMainColors; } });
+var social_variables_1 = require("./colors/social-variables");
+Object.defineProperty(exports, "socialMainColors", { enumerable: true, get: function () { return social_variables_1.socialMainColors; } });
+var language_variables_1 = require("./colors/language-variables");
+Object.defineProperty(exports, "languageMainColors", { enumerable: true, get: function () { return language_variables_1.languageMainColors; } });

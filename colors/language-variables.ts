@@ -1,7 +1,6 @@
 // In this module I the colors of some languages
 
 // Color and Final variables
-
 const cBlue = "#3949aa"
 const cDarkBlue = "#293693"
 const cLightBlue = "#5d6cbf"
@@ -36,8 +35,7 @@ const reactBlue = "#61dafb"
 const vueGreen = "#42b883"
 
 // Exports
-
-const languageMainColors = {
+export const languageMainColors = {
     cBlue,
     cDarkBlue,
     cLightBlue,
@@ -71,5 +69,3 @@ const languageMainColors = {
     reactBlue,
     vueGreen,
 }
-
-module.exports = {languageMainColors}

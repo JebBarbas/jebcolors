@@ -2,7 +2,6 @@
 // src = https://cdn.jsdelivr.net/gh/jebbarbas/bootstrap-plus@1.0.0/bsp.css
 
 // Color variables
-
 const purple = "#ae42bd"
 const orange = "#fd9800"
 const aqua = "#00cca3"
@@ -22,7 +21,6 @@ const black = "#000000"
 const lightGray = "#e9ecef"
 
 // Final color variables
-
 const magic = purple
 const juice = orange
 const ocean = aqua
@@ -41,9 +39,8 @@ const chocolate = brown
 const elegant = black
 const silver = lightGray
 
-// Exportables
-
-const jebcMainColors = {
+// Exports
+export const jebcMainColors = {
     magic,
     juice,
     ocean,
@@ -62,5 +59,3 @@ const jebcMainColors = {
     elegant,
     silver,
 }
-
-module.exports = {jebcMainColors}

@@ -1,5 +1,3 @@
-// THIS MODULE IS IN CONSTRUCTION, THE COLORS ARE INCOMPLETE
-
 // In this module I save all the web colors
 // src = https://en.wikipedia.org/wiki/Web_colors
 
@@ -116,7 +114,7 @@ const lightSteelBlue = "#b0c4de"
 const lightBlue = "#add8e6"
 const powderBlue = "#b0e0e6"
 
-// Purples, Violets and Magentas
+// Purples, Vioconsts and Magentas
 const indigo = "#4b0082"
 const purple = "#800080"
 const darkMagenta = "#8b008b"
@@ -169,8 +167,7 @@ const lightGray = "#d3d3d3"
 const gainsboro = "#dcdcdc"
 
 // Exports
-
-const webMainColors = {
+export const webMainColors = {
     mediumVioletRed,
     deepPink,
     paleVioletRed,
@@ -323,5 +320,3 @@ const webMainColors = {
     lightGray,
     gainsboro,
 }
-
-module.exports = {webMainColors}

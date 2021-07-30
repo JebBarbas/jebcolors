@@ -1,103 +1,68 @@
+"use strict";
 // Testing module
-
-// First, import all the color objects
-
-const assert = require('assert')
-const colors = require('colors')
-const args = require('minimist')(process.argv.slice(2))
-
-const watchcolors = args['watchcolors'] ? true : false
-
-const {
-    allColors
-} = require('./index')
-
-// Function to verify if a color is valid, returns a boolean
-
-const isValidColor = (color, name) => {
-    const colorLength = 7 // The length of a color string, incluying the "#" character
-    const hexValues = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'] // The valid hex characters
-    const charArray = color.substr(1).split('') // Puts in an array all the characters of the color except the first one (which must be the "#" character)
-
-    let foundError = false
-
-    const error = (toSay = '') => {
-        console.log(`X Error in color "${name}" (hexcode: ${color}): ${toSay}`.red)
-    }
-
-    if(!color.startsWith('#')){
-        foundError = true
-        error('The color must start with the "#" character')
-    }
-
-    if(color.length !== colorLength){
-        foundError = true
-        error(`The color must be ${colorLength} characters long (incluying the "#" character)`)
-    }
-
-    charArray.forEach(char => {
-        if(!hexValues.includes(char)){
-            foundError = true
-            error(`The character ${char} is NOT a valid hexadecimal character`)
-        }
-    })
-
-    return !foundError
-}
-
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+// First, import all the thing to work correctly
+var assert_1 = require("assert");
+var color_functions_1 = require("./functions/color-functions");
+var logs_1 = require("./functions/logs");
+// Import the colors
+var colors = __importStar(require("./index"));
+// Function to maintain the code cleaner
+var entries = function (object) { return Object.entries(object); };
 // For saving total colors and total errors
-let globalTotalColors = 0
-let globalTotalBadColors = 0
-let arrayOfObjectsWithError = []
-
-console.log('ℹ Starting Tests ...'.blue)
-console.log('')
-
-// Iterates the allColors array and verify all the inside colors
-allColors.forEach(colorObject => {
-    console.log(`ℹ Testing ${colorObject.name} ...`.blue)
-    let localTotalColors = 0
-    let localTotalBadColors = 0
-    for(color in colorObject.colors){
-        localTotalColors++
-        globalTotalColors++
-        if(!isValidColor(colorObject.colors[color],color)){
-            localTotalBadColors++
-            globalTotalBadColors++
+var globalTotalColors = 0;
+var globalTotalBadColors = 0;
+var arrayOfObjectsWithError = [];
+logs_1.info('Starting Tests ...');
+console.log('');
+entries(colors).forEach(function (entry) {
+    var colorGroupKey = entry[0], colorGroup = entry[1];
+    logs_1.info("Testing " + colorGroupKey + " ...");
+    var localTotalColors = 0;
+    var localTotalBadColors = 0;
+    entries(colorGroup).forEach(function (entry) {
+        var colorKey = entry[0], color = entry[1];
+        localTotalColors++;
+        globalTotalColors++;
+        if (!color_functions_1.isValidHexCode(color)) {
+            logs_1.error("Found error in color " + colorKey);
+            localTotalBadColors++;
+            globalTotalBadColors++;
         }
+    });
+    if (localTotalBadColors > 0) {
+        logs_1.warning("Found " + localTotalBadColors + " bad color(s) in " + colorGroupKey);
+        arrayOfObjectsWithError.push(colorGroupKey);
     }
-    if(localTotalBadColors > 0){
-        console.log(`⚠ Found ${localTotalBadColors} bad color(s) in ${colorObject.name}`.yellow)
-        arrayOfObjectsWithError.push(colorObject.name)
+    else {
+        logs_1.success("All " + localTotalColors + " colors in " + colorGroupKey + " passed the test");
     }
-    else{
-        console.log(`✔ All ${localTotalColors} colors in ${colorObject.name} passed the test`.green)
-    }
-    console.log('')
-})
-
+    console.log('');
+});
 // If 1 or more bad colors, say that, if not, all good
-if(globalTotalBadColors > 0){
-    console.log(`X Found ${globalTotalBadColors} bad color(s) in: ${arrayOfObjectsWithError.join()}. Please see your console for more information`.red)
+if (globalTotalBadColors > 0) {
+    logs_1.error("Found " + globalTotalBadColors + " bad color(s) in: " + arrayOfObjectsWithError.join() + ". Please see your console for more information");
 }
-else{
-    console.log(`✔ All ${globalTotalColors} colors in module passed the test`.green)
+else {
+    logs_1.success("All " + globalTotalColors + " colors in module passed the test");
 }
-
-assert.ok(globalTotalBadColors === 0)
-
-if(watchcolors){
-    console.log('')
-    const fs = require('fs')
-    try{
-        console.log('ℹ Creating "allColors.json" file ...'.blue)
-        fs.writeFileSync('./test/allColors.json',JSON.stringify(allColors))
-        console.log('✔ "allColors.json" file created'.green)
-
-        console.log('')
-        console.log('ℹ Running "npx serve test" to create a server and see the colors ...'.blue)
-    }
-    catch(err){
-        console.log(`X ${err}`.red)
-    }
-}
+assert_1.ok(globalTotalBadColors === 0);

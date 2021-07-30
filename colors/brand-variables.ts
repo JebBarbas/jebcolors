@@ -199,9 +199,8 @@ const youtubeRed = "#ff0000"
 const youtubeBlack = "#282828"
 const zoomLightBlue = "#2d8cff"
 
-// Exportables
-
-const brandPatentedColors = {
+// Exports
+export const brandPatentedColors = {
     rossoCorsa,
     tiffanyTurquoise,
     kleinBlue,
@@ -210,14 +209,14 @@ const brandPatentedColors = {
     milkaPurple
 }
 
-const brandCarColors = {
+export const brandCarColors = {
     hondaRed,
     hyundaiBlue,
     teslaRed,
     toyotaRed,
 }
 
-const brandBankColors = {
+export const brandBankColors = {
     americanexpressBlue,
     bitcoinOrange,
     hsbcRed,
@@ -230,7 +229,7 @@ const brandBankColors = {
     visaGold,
 }
 
-const brandTechColors = {
+export const brandTechColors = {
     androidGreen,
     iphoneMidnightGreen,
     iphoneSilver,
@@ -248,7 +247,7 @@ const brandTechColors = {
     iphoneGold,
 }
 
-const brandWebAndBrandColors = {
+export const brandWebAndBrandColors = {
     acerGreen,
     adobeRed,
     aeropostaleBlue,
@@ -311,7 +310,7 @@ const brandWebAndBrandColors = {
     zoomLightBlue,
 }
 
-const brandMarketColors = {
+export const brandMarketColors = {
     bestbuyYellow,
     costcoBlue,
     costcoRed,
@@ -328,7 +327,7 @@ const brandMarketColors = {
     walmartYellow,
 }
 
-const brandFoodColors = {
+export const brandFoodColors = {
     budlightBlue,
     buffalowindwingsYellow,
     burguerkingRed,
@@ -379,7 +378,7 @@ const brandFoodColors = {
     tacobellPurple,
 }
 
-const brandSocialColors = {
+export const brandSocialColors = {
     facebookBlue,
     googleBlue,
     googleGreen,
@@ -415,15 +414,4 @@ const brandSocialColors = {
     whatsappGreen,
     youtubeRed,
     youtubeBlack
-}
-
-module.exports = {
-    brandBankColors,
-    brandCarColors,
-    brandFoodColors,
-    brandMarketColors,
-    brandPatentedColors,
-    brandSocialColors,
-    brandTechColors,
-    brandWebAndBrandColors
 }
