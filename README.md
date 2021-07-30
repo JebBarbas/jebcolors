@@ -112,7 +112,7 @@ const theme = {
 If you write colors and you want to see if there are errors or/and you want to see how many colors there are, you can run in you console `npm test`, if there are any error with a color, you will be able to see in what color and what's the error. If there are not errors, you'll can see a message saying "All ## colors in module passed the test" where ## is the number of colors.
 
 ### npm run generatejson
-If you want to generate a JSON with all the colors you can run `npm run generatejson`. It will test all the colors and then generate the JSON file in './test/colors.json'. (When you run this script you will see at the very end a message saying that is going to start a server, this if for when you run `watchcolors`, if you only runned `generatejson` this server will never be created, don't worry)
+If you want to generate a JSON with all the colors you can run `npm run generatejson`. It will test all the colors and then generate the JSON file in './test/colors.json'. (When you run this script you will see at the very end a message saying that is going to start a server, this if for when you run `watchcolors`, if you only runned `generatejson` this server will never be created, don't worry).
 
 ### npm run watchcolors
 If you want to test that all the colors pass the test, and you want to see how the colors look, you can run `npm run watchcolors`, this will test the colors, generate the json, create a server in the folder `test` and create a `<div>` for each color in all the module (only colors, not gradients yet).
@@ -129,4 +129,4 @@ Is used to compile all the TypeScript files.
 - Compiles all the TypeScript in the project.
 
 ### npm run release
-Changes the package.json in base of the last git commit (see standard-version) and pushes the git repository
+Changes the package.json in base of the last git commit (see standard-version) and pushes the git repository.
