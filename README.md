@@ -58,11 +58,12 @@ export default App;
 ```
 
 ## ColorGroups
-There are 255 colors divided in 8 Color Groups.
+There are 269 colors divided in 8 Color Groups.
 - bootstrapMainColors (bootstrap's colors like "success", "primary" or "dark")
 - bootstrapUnusedColors (bootstrap's unused colors like "purple", "orange" or "teal")
 - bootstrapGrayColors (bootstrap's gray colors like "gray100" - "gray900")
 - jebcMainColors (The colors that are from this module, like "magic", "juice" or "ocean")
+- jebcUnusedColors (This colors are some that aren't exported before, like "silver2", "roseGold" and "spaceGrey")
 - consoleColors (The colors that you can use in the Windows CMD, like "red", "blue" or "green")
 - webColors (The web colors like "deepPink", "hotPink" or "pink")
 - socialMainColors (The colors of social media, like "facebook", "github" or "google")
@@ -112,7 +113,7 @@ const theme = {
 If you write colors and you want to see if there are errors or/and you want to see how many colors there are, you can run in you console `npm test`, if there are any error with a color, you will be able to see in what color and what's the error. If there are not errors, you'll can see a message saying "All ## colors in module passed the test" where ## is the number of colors.
 
 ### npm run generatejson
-If you want to generate a JSON with all the colors you can run `npm run generatejson`. It will test all the colors and then generate the JSON file in './test/colors.json'. (When you run this script you will see at the very end a message saying that is going to start a server, this if for when you run `watchcolors`, if you only runned `generatejson` this server will never be created, don't worry).
+If you want to generate a JSON with all the colors you can run `npm run generatejson`. It will test all the colors and then generate the JSON file in './test/colors.json'.
 
 ### npm run watchcolors
 If you want to test that all the colors pass the test, and you want to see how the colors look, you can run `npm run watchcolors`, this will test the colors, generate the json, create a server in the folder `test` and create a `<div>` for each color in all the module (only colors, not gradients yet).
@@ -124,9 +125,10 @@ The gradients from uiGradients are stored in a file in './gradients/uigradients-
 Is used to compile all the TypeScript files.
 
 ### npm run compileall
-- First, fetches the gradients.
-- Then generates the json of colors (without starting a server).
-- Compiles all the TypeScript in the project.
+- First, compiles all the files (this is to update the getfiles.ts files)
+- Then, fetches the gradients (with the compiled file getfiles.js) and creates "uigradients-gradients.js" in dist.
+- Then generates the json of colors and creates "colors.json" in test.
+- Compiles all the TypeScript again in the project.
 
 ### npm run release
 Changes the package.json in base of the last git commit (see standard-version) and pushes the git repository.

@@ -1,0 +1,25 @@
+export declare const languageMainColors: {
+    cBlue: string;
+    cDarkBlue: string;
+    cLightBlue: string;
+    cppBlue: string;
+    cppDarkBlue: string;
+    cppLightBlue: string;
+    csPurple: string;
+    csDarkPurple: string;
+    csLightPurple: string;
+    javaRed: string;
+    javaBlue: string;
+    javaOrange: string;
+    htmlOrange: string;
+    htmlDarkOrange: string;
+    cssBlue: string;
+    cssDarkBlue: string;
+    jsYellow: string;
+    phpLavender: string;
+    pyBlue: string;
+    pyYellow: string;
+    nodeGreen: string;
+    reactBlue: string;
+    vueGreen: string;
+};
