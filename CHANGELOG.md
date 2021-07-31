@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/JebBarbas/jebcolors/compare/v2.0.0...v2.1.0) (2021-07-31)
+
+
+### Features
+
+* Changed project distribution and TypeScript definitions ([c8aea4e](https://github.com/JebBarbas/jebcolors/commit/c8aea4e320f12531d080d81f98c473d6b99a450d))
+
 ## [2.0.0](https://github.com/JebBarbas/jebcolors/compare/v1.1.4...v2.0.0) (2021-07-30)
 
 
