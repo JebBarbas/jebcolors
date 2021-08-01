@@ -93,7 +93,7 @@ export default App
 ```
 
 ## Functions
-In version 2.0.0+ you can use also some color-relationated functions, importing `jebcolors/functions`.
+In version 2.0.0+ you can use also some color-relationated functions, importing `jebcolors/dist/functions`.
 In this example, I'g going to show the rgb, hsl and light functions.
 ```javascript
 import {rgb, hsl, light} from 'jebcolors/dist/functions'
