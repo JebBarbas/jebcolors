@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/JebBarbas/jebcolors/compare/v2.1.0...v2.2.0) (2021-08-01)
+
+
+### Features
+
+* now imports are different and functions and gradients are exported apart again (remember to clean your cache) ([a3d8ea5](https://github.com/JebBarbas/jebcolors/commit/a3d8ea5657ee1ae07fa187765ce97a227b9f60ba))
+
 ## [2.1.0](https://github.com/JebBarbas/jebcolors/compare/v2.0.0...v2.1.0) (2021-07-31)
 
 
