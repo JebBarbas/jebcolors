@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.1](https://github.com/JebBarbas/jebcolors/compare/v2.2.0...v2.2.1) (2021-08-01)
+
+
+### Bug Fixes
+
+* fixed a line in README ([e29c057](https://github.com/JebBarbas/jebcolors/commit/e29c057c8be4577ef9943927c2e8b8bce77ce69a))
+
 ## [2.2.0](https://github.com/JebBarbas/jebcolors/compare/v2.1.0...v2.2.0) (2021-08-01)
 
 

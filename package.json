@@ -1,6 +1,6 @@
 {
   "name": "jebcolors",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "JebColors is a personal module I made to use colors in a easier mode in react-native, stores the hexadecimal values of a lot of colors, like bootstrap colors, console colors or the module own colors.",
   "main": "dist/index.js",
   "scripts": {
