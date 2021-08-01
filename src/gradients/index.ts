@@ -1,19 +1,11 @@
-// Module to export gradients (not default, only if you want them)
-
-// Imports
-import {
-    grabientMainGradients,
-} from './grabient-variables'
-
-import {
-    getUi,
-    getUiGradientColors,
-} from './uigradients-variables'
+// Main module to export the gradients
 
 // Exports
 export {
     grabientMainGradients,
+} from './grabient-variables'
 
+export {
     getUi,
     getUiGradientColors,
-}
+} from './uigradients-variables'

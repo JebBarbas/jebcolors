@@ -1,13 +1,14 @@
-// Main module, only if you want to use the functions
+// Main module to export the functions
 
-// Imports
-import {
-    clean,
+
+// Exports
+export {
     normalize,
-    percentage,
+    clean,
+    percentage
 } from './functions'
 
-import {
+export {
     fixHexCode,
     getBlueValue,
     getGreenValue,
@@ -21,23 +22,3 @@ import {
     rgb,
     rgbToHsl,
 } from './color-functions'
-
-// Exports
-export {
-    clean,
-    normalize,
-    percentage,
-
-    fixHexCode,
-    getBlueValue,
-    getGreenValue,
-    getRedValue,
-    hsl,
-    hslToRgb,
-    isValidHexCode,
-    light,
-    normalizeColorValue,
-    normalizeHSLValue,
-    rgb,
-    rgbToHsl,
-}

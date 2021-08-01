@@ -22,10 +22,10 @@ var __importStar = (this && this.__importStar) || function (mod) {
 exports.__esModule = true;
 // First, import all the thing to work correctly
 var assert_1 = require("assert");
-var color_functions_1 = require("./functions/color-functions");
+var functions_1 = require("./functions");
 var logs_1 = require("./functions/logs");
 // Import the colors
-var colors = __importStar(require("./index"));
+var colors = __importStar(require("."));
 // Function to maintain the code cleaner
 var entries = function (object) { return Object.entries(object); };
 // For saving total colors and total errors
@@ -43,7 +43,7 @@ entries(colors).forEach(function (entry) {
         var colorKey = entry[0], color = entry[1];
         localTotalColors++;
         globalTotalColors++;
-        if (!color_functions_1.isValidHexCode(color)) {
+        if (!functions_1.isValidHexCode(color)) {
             logs_1.error("Found error in color " + colorKey);
             localTotalBadColors++;
             globalTotalBadColors++;

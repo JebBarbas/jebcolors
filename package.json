@@ -10,7 +10,8 @@
     "getgradients": "node ./dist/gradients/getfiles.js",
     "compile": "tsc",
     "compileall": "npm run compile && npm run getgradients && npm run generatejson && npm run compile",
-    "release": "standard-version && git push --follow-tags origin main && npm publish"
+    "release": "standard-version",
+    "compartir": "git push --follow-tags origin main && npm publish"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "keywords": [
     "colors",
+    "gradients",
     "jebcolors",
     "react-native",
     "react"

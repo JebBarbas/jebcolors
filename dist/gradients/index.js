@@ -1,11 +1,18 @@
 "use strict";
-// Module to export gradients (not default, only if you want them)
+// Main module to export the gradients
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
 exports.__esModule = true;
 exports.getUiGradientColors = exports.getUi = exports.grabientMainGradients = void 0;
-// Imports
+// Exports
 var grabient_variables_1 = require("./grabient-variables");
-exports.grabientMainGradients = grabient_variables_1.grabientMainGradients;
+__createBinding(exports, grabient_variables_1, "grabientMainGradients");
 var uigradients_variables_1 = require("./uigradients-variables");
-exports.getUi = uigradients_variables_1.getUi;
-exports.getUiGradientColors = uigradients_variables_1.getUiGradientColors;
+__createBinding(exports, uigradients_variables_1, "getUi");
+__createBinding(exports, uigradients_variables_1, "getUiGradientColors");
 //# sourceMappingURL=index.js.map

@@ -1,47 +1,29 @@
-// Principal module (exports colors)
+// Principal module that exports the colors
 
-// Imports
-import {
+// Exports
+export {
     bootstrapMainColors,
     bootstrapUnusedColors,
     bootstrapGrayColors,
 } from './colors/bootstrap-variables'
 
-import {
+export {
     jebcMainColors,
     jebcUnusedColors,
 } from './colors/jebc-variables'
 
-import {
+export {
     consoleMainColors
 } from './colors/console-variables'
 
-import {
+export {
     webMainColors
 } from './colors/web-variables'
 
-import {
+export {
     socialMainColors
 } from './colors/social-variables'
 
-import {
+export {
     languageMainColors,
 } from './colors/language-variables'
-
-// Exports
-export {
-    bootstrapGrayColors,
-    bootstrapMainColors,
-    bootstrapUnusedColors,
-    
-    jebcMainColors,
-    jebcUnusedColors,
-
-    consoleMainColors,
-
-    webMainColors,
-
-    socialMainColors,
-
-    languageMainColors,
-}

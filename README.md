@@ -70,13 +70,13 @@ There are 269 colors divided in 8 Color Groups.
 - languageMainColors (The main colors from some languages, like "jsYellow", "pyBlue" or "javaRed")
 
 ## Gradients
-In version 2.0.0+ you can use also gradients, importing `jebcolors/gradients`.
+In version 2.0.0+ you can use also gradients, importing `jebcolors/dist/gradients`.
 In this example I'm going to apply two different gradients (one from grabient and one from uigradients) to 2 different LinearGradient components imported from `expo-linear-gradient`.
 ```jsx
 import React from 'react'
 import { Text, View } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
-import { grabientMainGradients, getUi } from 'jebcolors/gradients'
+import { grabientMainGradients, getUi } from 'jebcolors/dist/gradients'
 
 const App = () => (
     <View>
@@ -96,7 +96,7 @@ export default App
 In version 2.0.0+ you can use also some color-relationated functions, importing `jebcolors/functions`.
 In this example, I'g going to show the rgb, hsl and light functions.
 ```javascript
-import {rgb, hsl, light} from 'jebcolors/functions'
+import {rgb, hsl, light} from 'jebcolors/dist/functions'
 
 const primaryColor = rgb(100, 200, 250)
 const secondaryColor = hsl(1,0.5,0.5)

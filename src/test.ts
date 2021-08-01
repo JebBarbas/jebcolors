@@ -2,11 +2,11 @@
 
 // First, import all the thing to work correctly
 import { ok } from 'assert'
-import { isValidHexCode } from './functions/color-functions'
+import { isValidHexCode } from './functions'
 import { info, warning, error, success } from './functions/logs'
 
 // Import the colors
-import * as colors from './index'
+import * as colors from '.'
 
 // Function to maintain the code cleaner
 const entries = (object:object):[string, any][] => Object.entries(object)

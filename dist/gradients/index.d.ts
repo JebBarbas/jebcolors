@@ -1,3 +1,2 @@
-import { grabientMainGradients } from './grabient-variables';
-import { getUi, getUiGradientColors } from './uigradients-variables';
-export { grabientMainGradients, getUi, getUiGradientColors, };
+export { grabientMainGradients, } from './grabient-variables';
+export { getUi, getUiGradientColors, } from './uigradients-variables';
