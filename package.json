@@ -1,17 +1,18 @@
 {
   "name": "jebcolors",
   "version": "2.2.1",
-  "description": "JebColors is a personal module I made to use colors in a easier mode in react-native, stores the hexadecimal values of a lot of colors, like bootstrap colors, console colors or the module own colors.",
+  "description": "jebcolors is a module that provides a lot of colors, like the bootstrap colors, the web colors or a lot of colors that I personally wrote, like my own colors, social media colors and some languages colors. It also provides gradients from grabient, instagram and uigradients. And functions to use with the colors, like rgb() or light(). This module was originally written by me to use it with react-native, but you can use it with a lot of another node modules like react.",
   "main": "dist/index.js",
   "scripts": {
     "test": "node ./dist/test.js",
     "generatejson": "npm run test && node ./dist/generatejson.js",
     "watchcolors": "npm run generatejson && node ./dist/watchcolors.js && npx serve test",
-    "getgradients": "node ./dist/gradients/getfiles.js",
+    "getgradients": "node ./dist/gradients/getui.js",
     "compile": "tsc",
-    "compileall": "npm run compile && npm run getgradients && npm run generatejson && npm run compile",
+    "compileall": "npm run compile && npm run getgradients && npm run compile && npm run generatejson",
     "release": "standard-version",
-    "compartir": "git push --follow-tags origin main && npm publish"
+    "compartir": "git push --follow-tags origin main && npm publish",
+    "history": "git log --oneline --decorate --all --graph"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,9 @@
     "gradients",
     "jebcolors",
     "react-native",
-    "react"
+    "react",
+    "uigradients",
+    "grabient"
   ],
   "author": "jebbarbas",
   "license": "ISC",

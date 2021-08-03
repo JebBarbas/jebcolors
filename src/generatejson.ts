@@ -1,16 +1,19 @@
 // Import the colors and file
 import * as colors from '.'
-import { info, success, error } from './functions/logs'
+import * as gradients from './gradients'
+import { info, success, error, enter } from './functions/logs'
 import { writeFileSync } from 'fs'
 
 // Convert to JSON
-const json = JSON.stringify(colors)
+const colorsJSON = JSON.stringify(colors,null,4)
+const gradientsJSON = JSON.stringify(gradients,null,4) // Don't matter if there are functions because in the JSON doesn't appear
 
 try{
-    console.log('')
-    info('Creating "colors.json" file ...')
-    writeFileSync('./test/colors.json',json)
-    success('"colors.json" file created')
+    enter()
+    info('Creating "colors.json" and "gradients.json" files ...')
+    writeFileSync('./test/colors.json',colorsJSON)
+    writeFileSync('./test/gradients.json', gradientsJSON)
+    success('"colors.json" and "gradients.json" files created')
 }
 catch(err){
     error(`${err}`)

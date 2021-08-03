@@ -22,4 +22,7 @@ export declare const languageMainColors: {
     nodeGreen: string;
     reactBlue: string;
     vueGreen: string;
+    angularRed: string;
+    azureBlue: string;
+    svelteOrange: string;
 };

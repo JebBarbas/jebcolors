@@ -26,6 +26,9 @@ var pyYellow = "#ffd849";
 var nodeGreen = "#215732";
 var reactBlue = "#61dafb";
 var vueGreen = "#42b883";
+var angularRed = "#dd0531";
+var azureBlue = "#007fff";
+var svelteOrange = "#ff3d00";
 // Exports
 exports.languageMainColors = {
     cBlue: cBlue,
@@ -50,6 +53,9 @@ exports.languageMainColors = {
     pyYellow: pyYellow,
     nodeGreen: nodeGreen,
     reactBlue: reactBlue,
-    vueGreen: vueGreen
+    vueGreen: vueGreen,
+    angularRed: angularRed,
+    azureBlue: azureBlue,
+    svelteOrange: svelteOrange
 };
 //# sourceMappingURL=language-variables.js.map

@@ -1,0 +1,1678 @@
+{
+    "__esModule": true,
+    "grabientMainGradients": {
+        "sweetOrange": [
+            "#fbab7e",
+            "#f7ce68"
+        ],
+        "sweetGreen": [
+            "#85ffbd",
+            "#fffb7d"
+        ],
+        "sweetBlue": [
+            "#8bc6ec",
+            "#9599e2"
+        ],
+        "sweetPink": [
+            "#fbda61",
+            "#ff5acd"
+        ],
+        "strongOrange": [
+            "#fad961",
+            "#f76b1c"
+        ],
+        "strongGreen": [
+            "#f4d03f",
+            "#16a085"
+        ],
+        "strongBlue": [
+            "#21d4fd",
+            "#b721ff"
+        ],
+        "strongPink": [
+            "#ff9a8b",
+            "#ff6a88",
+            "#ff99ac"
+        ],
+        "strongRed": [
+            "#ffe53b",
+            "#ff2525"
+        ],
+        "strongPurple": [
+            "#ff3cac",
+            "#784ba0",
+            "#2b86c5"
+        ],
+        "magicOne": [
+            "#00dbde",
+            "#fc00ff"
+        ],
+        "magicTwo": [
+            "#08aeea",
+            "#2af598"
+        ],
+        "magicThree": [
+            "#fa8bff",
+            "#2bd2ff",
+            "#2bff88"
+        ],
+        "magicFour": [
+            "#fee140",
+            "#fa709a"
+        ]
+    },
+    "uiMainGradients": {
+        "omolon": [
+            "#091E3A",
+            "#2F80ED",
+            "#2D9EE0"
+        ],
+        "farhan": [
+            "#9400D3",
+            "#4B0082"
+        ],
+        "purple": [
+            "#c84e89",
+            "#F15F79"
+        ],
+        "ibtesam": [
+            "#00F5A0",
+            "#00D9F5"
+        ],
+        "radioactiveHeat": [
+            "#F7941E",
+            "#72C6EF",
+            "#00A651"
+        ],
+        "theSkyAndTheSea": [
+            "#F7941E",
+            "#004E8F"
+        ],
+        "fromIceToFire": [
+            "#72C6EF",
+            "#004E8F"
+        ],
+        "blueAndOrange": [
+            "#FD8112",
+            "#0085CA"
+        ],
+        "purpleDream": [
+            "#bf5ae0",
+            "#a811da"
+        ],
+        "blu": [
+            "#00416A",
+            "#E4E5E6"
+        ],
+        "summerBreeze": [
+            "#fbed96",
+            "#abecd6"
+        ],
+        "ver": [
+            "#FFE000",
+            "#799F0C"
+        ],
+        "verBlack": [
+            "#F7F8F8",
+            "#ACBB78"
+        ],
+        "combi": [
+            "#00416A",
+            "#799F0C",
+            "#FFE000"
+        ],
+        "anwar": [
+            "#334d50",
+            "#cbcaa5"
+        ],
+        "bluelagoo": [
+            "#0052D4",
+            "#4364F7",
+            "#6FB1FC"
+        ],
+        "lunada": [
+            "#5433FF",
+            "#20BDFF",
+            "#A5FECB"
+        ],
+        "reaqua": [
+            "#799F0C",
+            "#ACBB78"
+        ],
+        "mango": [
+            "#ffe259",
+            "#ffa751"
+        ],
+        "bupe": [
+            "#00416A",
+            "#E4E5E6"
+        ],
+        "rea": [
+            "#FFE000",
+            "#799F0C"
+        ],
+        "windy": [
+            "#acb6e5",
+            "#86fde8"
+        ],
+        "royalBlue": [
+            "#536976",
+            "#292E49"
+        ],
+        "royalBluePlusPetrol": [
+            "#BBD2C5",
+            "#536976",
+            "#292E49"
+        ],
+        "copper": [
+            "#B79891",
+            "#94716B"
+        ],
+        "anamnisar": [
+            "#9796f0",
+            "#fbc7d4"
+        ],
+        "petrol": [
+            "#BBD2C5",
+            "#536976"
+        ],
+        "sky": [
+            "#076585",
+            "#fff"
+        ],
+        "sel": [
+            "#00467F",
+            "#A5CC82"
+        ],
+        "afternoon": [
+            "#000C40",
+            "#607D8B"
+        ],
+        "skyline": [
+            "#1488CC",
+            "#2B32B2"
+        ],
+        "dimigo": [
+            "#ec008c",
+            "#fc6767"
+        ],
+        "purpleLove": [
+            "#cc2b5e",
+            "#753a88"
+        ],
+        "sexyBlue": [
+            "#2193b0",
+            "#6dd5ed"
+        ],
+        "blooker20": [
+            "#e65c00",
+            "#F9D423"
+        ],
+        "seaBlue": [
+            "#2b5876",
+            "#4e4376"
+        ],
+        "nimvelo": [
+            "#314755",
+            "#26a0da"
+        ],
+        "hazel": [
+            "#77A1D3",
+            "#79CBCA",
+            "#E684AE"
+        ],
+        "noontoDusk": [
+            "#ff6e7f",
+            "#bfe9ff"
+        ],
+        "youtube": [
+            "#e52d27",
+            "#b31217"
+        ],
+        "coolBrown": [
+            "#603813",
+            "#b29f94"
+        ],
+        "harmonicEnergy": [
+            "#16A085",
+            "#F4D03F"
+        ],
+        "playingwithReds": [
+            "#D31027",
+            "#EA384D"
+        ],
+        "sunnyDays": [
+            "#EDE574",
+            "#E1F5C4"
+        ],
+        "greenBeach": [
+            "#02AAB0",
+            "#00CDAC"
+        ],
+        "intuitivePurple": [
+            "#DA22FF",
+            "#9733EE"
+        ],
+        "emeraldWater": [
+            "#348F50",
+            "#56B4D3"
+        ],
+        "lemonTwist": [
+            "#3CA55C",
+            "#B5AC49"
+        ],
+        "monteCarlo": [
+            "#CC95C0",
+            "#DBD4B4",
+            "#7AA1D2"
+        ],
+        "horizon": [
+            "#003973",
+            "#E5E5BE"
+        ],
+        "roseWater": [
+            "#E55D87",
+            "#5FC3E4"
+        ],
+        "frozen": [
+            "#403B4A",
+            "#E7E9BB"
+        ],
+        "mangoPulp": [
+            "#F09819",
+            "#EDDE5D"
+        ],
+        "bloodyMary": [
+            "#FF512F",
+            "#DD2476"
+        ],
+        "aubergine": [
+            "#AA076B",
+            "#61045F"
+        ],
+        "aquaMarine": [
+            "#1A2980",
+            "#26D0CE"
+        ],
+        "sunrise": [
+            "#FF512F",
+            "#F09819"
+        ],
+        "purpleParadise": [
+            "#1D2B64",
+            "#F8CDDA"
+        ],
+        "stripe": [
+            "#1FA2FF",
+            "#12D8FA",
+            "#A6FFCB"
+        ],
+        "seaWeed": [
+            "#4CB8C4",
+            "#3CD3AD"
+        ],
+        "pinky": [
+            "#DD5E89",
+            "#F7BB97"
+        ],
+        "cherry": [
+            "#EB3349",
+            "#F45C43"
+        ],
+        "mojito": [
+            "#1D976C",
+            "#93F9B9"
+        ],
+        "juicyOrange": [
+            "#FF8008",
+            "#FFC837"
+        ],
+        "mirage": [
+            "#16222A",
+            "#3A6073"
+        ],
+        "steelGray": [
+            "#1F1C2C",
+            "#928DAB"
+        ],
+        "kashmir": [
+            "#614385",
+            "#516395"
+        ],
+        "electricViolet": [
+            "#4776E6",
+            "#8E54E9"
+        ],
+        "veniceBlue": [
+            "#085078",
+            "#85D8CE"
+        ],
+        "boraBora": [
+            "#2BC0E4",
+            "#EAECC6"
+        ],
+        "moss": [
+            "#134E5E",
+            "#71B280"
+        ],
+        "shroomHaze": [
+            "#5C258D",
+            "#4389A2"
+        ],
+        "mystic": [
+            "#757F9A",
+            "#D7DDE8"
+        ],
+        "midnightCity": [
+            "#232526",
+            "#414345"
+        ],
+        "seaBlizz": [
+            "#1CD8D2",
+            "#93EDC7"
+        ],
+        "opa": [
+            "#3D7EAA",
+            "#FFE47A"
+        ],
+        "titanium": [
+            "#283048",
+            "#859398"
+        ],
+        "mantle": [
+            "#24C6DC",
+            "#514A9D"
+        ],
+        "dracula": [
+            "#DC2424",
+            "#4A569D"
+        ],
+        "peach": [
+            "#ED4264",
+            "#FFEDBC"
+        ],
+        "moonrise": [
+            "#DAE2F8",
+            "#D6A4A4"
+        ],
+        "clouds": [
+            "#ECE9E6",
+            "#FFFFFF"
+        ],
+        "stellar": [
+            "#7474BF",
+            "#348AC7"
+        ],
+        "bourbon": [
+            "#EC6F66",
+            "#F3A183"
+        ],
+        "calmDarya": [
+            "#5f2c82",
+            "#49a09d"
+        ],
+        "influenza": [
+            "#C04848",
+            "#480048"
+        ],
+        "shrimpy": [
+            "#e43a15",
+            "#e65245"
+        ],
+        "army": [
+            "#414d0b",
+            "#727a17"
+        ],
+        "miaka": [
+            "#FC354C",
+            "#0ABFBC"
+        ],
+        "pinotNoir": [
+            "#4b6cb7",
+            "#182848"
+        ],
+        "dayTripper": [
+            "#f857a6",
+            "#ff5858"
+        ],
+        "namn": [
+            "#a73737",
+            "#7a2828"
+        ],
+        "blurryBeach": [
+            "#d53369",
+            "#cbad6d"
+        ],
+        "vasily": [
+            "#e9d362",
+            "#333333"
+        ],
+        "aLostMemory": [
+            "#DE6262",
+            "#FFB88C"
+        ],
+        "petrichor": [
+            "#666600",
+            "#999966"
+        ],
+        "jonquil": [
+            "#FFEEEE",
+            "#DDEFBB"
+        ],
+        "siriusTamed": [
+            "#EFEFBB",
+            "#D4D3DD"
+        ],
+        "kyoto": [
+            "#c21500",
+            "#ffc500"
+        ],
+        "mistyMeadow": [
+            "#215f00",
+            "#e4e4d9"
+        ],
+        "aqualicious": [
+            "#50C9C3",
+            "#96DEDA"
+        ],
+        "moor": [
+            "#616161",
+            "#9bc5c3"
+        ],
+        "almost": [
+            "#ddd6f3",
+            "#faaca8"
+        ],
+        "foreverLost": [
+            "#5D4157",
+            "#A8CABA"
+        ],
+        "winter": [
+            "#E6DADA",
+            "#274046"
+        ],
+        "nelson": [
+            "#f2709c",
+            "#ff9472"
+        ],
+        "autumn": [
+            "#DAD299",
+            "#B0DAB9"
+        ],
+        "candy": [
+            "#D3959B",
+            "#BFE6BA"
+        ],
+        "reef": [
+            "#00d2ff",
+            "#3a7bd5"
+        ],
+        "theStrain": [
+            "#870000",
+            "#190A05"
+        ],
+        "dirtyFog": [
+            "#B993D6",
+            "#8CA6DB"
+        ],
+        "earthly": [
+            "#649173",
+            "#DBD5A4"
+        ],
+        "virgin": [
+            "#C9FFBF",
+            "#FFAFBD"
+        ],
+        "ash": [
+            "#606c88",
+            "#3f4c6b"
+        ],
+        "cherryblossoms": [
+            "#FBD3E9",
+            "#BB377D"
+        ],
+        "parklife": [
+            "#ADD100",
+            "#7B920A"
+        ],
+        "danceToForget": [
+            "#FF4E50",
+            "#F9D423"
+        ],
+        "starfall": [
+            "#F0C27B",
+            "#4B1248"
+        ],
+        "redMist": [
+            "#000000",
+            "#e74c3c"
+        ],
+        "tealLove": [
+            "#AAFFA9",
+            "#11FFBD"
+        ],
+        "neonLife": [
+            "#B3FFAB",
+            "#12FFF7"
+        ],
+        "manofSteel": [
+            "#780206",
+            "#061161"
+        ],
+        "amethyst": [
+            "#9D50BB",
+            "#6E48AA"
+        ],
+        "cheerUpEmoKid": [
+            "#556270",
+            "#FF6B6B"
+        ],
+        "shore": [
+            "#70e1f5",
+            "#ffd194"
+        ],
+        "facebookMessenger": [
+            "#00c6ff",
+            "#0072ff"
+        ],
+        "soundcloud": [
+            "#fe8c00",
+            "#f83600"
+        ],
+        "behongo": [
+            "#52c234",
+            "#061700"
+        ],
+        "servquick": [
+            "#485563",
+            "#29323c"
+        ],
+        "friday": [
+            "#83a4d4",
+            "#b6fbff"
+        ],
+        "martini": [
+            "#FDFC47",
+            "#24FE41"
+        ],
+        "metallicToad": [
+            "#abbaab",
+            "#ffffff"
+        ],
+        "betweenTheClouds": [
+            "#73C8A9",
+            "#373B44"
+        ],
+        "crazyOrangeI": [
+            "#D38312",
+            "#A83279"
+        ],
+        "hersheys": [
+            "#1e130c",
+            "#9a8478"
+        ],
+        "talkingToMiceElf": [
+            "#948E99",
+            "#2E1437"
+        ],
+        "purpleBliss": [
+            "#360033",
+            "#0b8793"
+        ],
+        "predawn": [
+            "#FFA17F",
+            "#00223E"
+        ],
+        "endlessRiver": [
+            "#43cea2",
+            "#185a9d"
+        ],
+        "pastelOrangeattheSun": [
+            "#ffb347",
+            "#ffcc33"
+        ],
+        "twitch": [
+            "#6441A5",
+            "#2a0845"
+        ],
+        "atlas": [
+            "#FEAC5E",
+            "#C779D0",
+            "#4BC0C8"
+        ],
+        "instagram": [
+            "#833ab4",
+            "#fd1d1d",
+            "#fcb045"
+        ],
+        "flickr": [
+            "#ff0084",
+            "#33001b"
+        ],
+        "vine": [
+            "#00bf8f",
+            "#001510"
+        ],
+        "turquoiseflow": [
+            "#136a8a",
+            "#267871"
+        ],
+        "portrait": [
+            "#8e9eab",
+            "#eef2f3"
+        ],
+        "virginAmerica": [
+            "#7b4397",
+            "#dc2430"
+        ],
+        "kokoCaramel": [
+            "#D1913C",
+            "#FFD194"
+        ],
+        "freshTurboscent": [
+            "#F1F2B5",
+            "#135058"
+        ],
+        "greentodark": [
+            "#6A9113",
+            "#141517"
+        ],
+        "ukraine": [
+            "#004FF9",
+            "#FFF94C"
+        ],
+        "curiosityblue": [
+            "#525252",
+            "#3d72b4"
+        ],
+        "darkKnight": [
+            "#BA8B02",
+            "#181818"
+        ],
+        "piglet": [
+            "#ee9ca7",
+            "#ffdde1"
+        ],
+        "lizard": [
+            "#304352",
+            "#d7d2cc"
+        ],
+        "sagePersuasion": [
+            "#CCCCB2",
+            "#757519"
+        ],
+        "betweenNightandDay": [
+            "#2c3e50",
+            "#3498db"
+        ],
+        "timber": [
+            "#fc00ff",
+            "#00dbde"
+        ],
+        "passion": [
+            "#e53935",
+            "#e35d5b"
+        ],
+        "clearSky": [
+            "#005C97",
+            "#363795"
+        ],
+        "masterCard": [
+            "#f46b45",
+            "#eea849"
+        ],
+        "backToEarth": [
+            "#00C9FF",
+            "#92FE9D"
+        ],
+        "deepPurple": [
+            "#673AB7",
+            "#512DA8"
+        ],
+        "littleLeaf": [
+            "#76b852",
+            "#8DC26F"
+        ],
+        "netflix": [
+            "#8E0E00",
+            "#1F1C18"
+        ],
+        "lightOrange": [
+            "#FFB75E",
+            "#ED8F03"
+        ],
+        "greenandBlue": [
+            "#c2e59c",
+            "#64b3f4"
+        ],
+        "poncho": [
+            "#403A3E",
+            "#BE5869"
+        ],
+        "backtotheFuture": [
+            "#C02425",
+            "#F0CB35"
+        ],
+        "blush": [
+            "#B24592",
+            "#F15F79"
+        ],
+        "inbox": [
+            "#457fca",
+            "#5691c8"
+        ],
+        "purplin": [
+            "#6a3093",
+            "#a044ff"
+        ],
+        "paleWood": [
+            "#eacda3",
+            "#d6ae7b"
+        ],
+        "haikus": [
+            "#fd746c",
+            "#ff9068"
+        ],
+        "pizelex": [
+            "#114357",
+            "#F29492"
+        ],
+        "joomla": [
+            "#1e3c72",
+            "#2a5298"
+        ],
+        "christmas": [
+            "#2F7336",
+            "#AA3A38"
+        ],
+        "minnesotaVikings": [
+            "#5614B0",
+            "#DBD65C"
+        ],
+        "miamiDolphins": [
+            "#4DA0B0",
+            "#D39D38"
+        ],
+        "forest": [
+            "#5A3F37",
+            "#2C7744"
+        ],
+        "nighthawk": [
+            "#2980b9",
+            "#2c3e50"
+        ],
+        "superman": [
+            "#0099F7",
+            "#F11712"
+        ],
+        "suzy": [
+            "#834d9b",
+            "#d04ed6"
+        ],
+        "darkSkies": [
+            "#4B79A1",
+            "#283E51"
+        ],
+        "deepSpace": [
+            "#000000",
+            "#434343"
+        ],
+        "decent": [
+            "#4CA1AF",
+            "#C4E0E5"
+        ],
+        "colorsOfSky": [
+            "#E0EAFC",
+            "#CFDEF3"
+        ],
+        "purpleWhite": [
+            "#BA5370",
+            "#F4E2D8"
+        ],
+        "ali": [
+            "#ff4b1f",
+            "#1fddff"
+        ],
+        "alihossein": [
+            "#f7ff00",
+            "#db36a4"
+        ],
+        "shahabi": [
+            "#a80077",
+            "#66ff00"
+        ],
+        "redOcean": [
+            "#1D4350",
+            "#A43931"
+        ],
+        "tranquil": [
+            "#EECDA3",
+            "#EF629F"
+        ],
+        "transfile": [
+            "#16BFFD",
+            "#CB3066"
+        ],
+        "sylvia": [
+            "#ff4b1f",
+            "#ff9068"
+        ],
+        "sweetMorning": [
+            "#FF5F6D",
+            "#FFC371"
+        ],
+        "politics": [
+            "#2196f3",
+            "#f44336"
+        ],
+        "brightVault": [
+            "#00d2ff",
+            "#928DAB"
+        ],
+        "solidVault": [
+            "#3a7bd5",
+            "#3a6073"
+        ],
+        "sunset": [
+            "#0B486B",
+            "#F56217"
+        ],
+        "grapefruitSunset": [
+            "#e96443",
+            "#904e95"
+        ],
+        "deepSeaSpace": [
+            "#2C3E50",
+            "#4CA1AF"
+        ],
+        "dusk": [
+            "#2C3E50",
+            "#FD746C"
+        ],
+        "minimalRed": [
+            "#F00000",
+            "#DC281E"
+        ],
+        "royal": [
+            "#141E30",
+            "#243B55"
+        ],
+        "mauve": [
+            "#42275a",
+            "#734b6d"
+        ],
+        "frost": [
+            "#000428",
+            "#004e92"
+        ],
+        "lush": [
+            "#56ab2f",
+            "#a8e063"
+        ],
+        "firewatch": [
+            "#cb2d3e",
+            "#ef473a"
+        ],
+        "sherbert": [
+            "#f79d00",
+            "#64f38c"
+        ],
+        "bloodRed": [
+            "#f85032",
+            "#e73827"
+        ],
+        "sunontheHorizon": [
+            "#fceabb",
+            "#f8b500"
+        ],
+        "iiitDelhi": [
+            "#808080",
+            "#3fada8"
+        ],
+        "jupiter": [
+            "#ffd89b",
+            "#19547b"
+        ],
+        "fiftyShadesofGrey": [
+            "#bdc3c7",
+            "#2c3e50"
+        ],
+        "dania": [
+            "#BE93C5",
+            "#7BC6CC"
+        ],
+        "limeade": [
+            "#A1FFCE",
+            "#FAFFD1"
+        ],
+        "disco": [
+            "#4ECDC4",
+            "#556270"
+        ],
+        "loveCouple": [
+            "#3a6186",
+            "#89253e"
+        ],
+        "azurePop": [
+            "#ef32d9",
+            "#89fffd"
+        ],
+        "nepal": [
+            "#de6161",
+            "#2657eb"
+        ],
+        "cosmicFusion": [
+            "#ff00cc",
+            "#333399"
+        ],
+        "snapchat": [
+            "#fffc00",
+            "#ffffff"
+        ],
+        "edsSunsetGradient": [
+            "#ff7e5f",
+            "#feb47b"
+        ],
+        "bradyBradyFunFun": [
+            "#00c3ff",
+            "#ffff1c"
+        ],
+        "blackRosé": [
+            "#f4c4f3",
+            "#fc67fa"
+        ],
+        "eightysPurple": [
+            "#41295a",
+            "#2F0743"
+        ],
+        "radar": [
+            "#A770EF",
+            "#CF8BF3",
+            "#FDB99B"
+        ],
+        "ibizaSunset": [
+            "#ee0979",
+            "#ff6a00"
+        ],
+        "dawn": [
+            "#F3904F",
+            "#3B4371"
+        ],
+        "mild": [
+            "#67B26F",
+            "#4ca2cd"
+        ],
+        "viceCity": [
+            "#3494E6",
+            "#EC6EAD"
+        ],
+        "jaipur": [
+            "#DBE6F6",
+            "#C5796D"
+        ],
+        "jodhpur": [
+            "#9CECFB",
+            "#65C7F7",
+            "#0052D4"
+        ],
+        "cocoaaIce": [
+            "#c0c0aa",
+            "#1cefff"
+        ],
+        "easymed": [
+            "#DCE35B",
+            "#45B649"
+        ],
+        "roseColoredLenses": [
+            "#E8CBC0",
+            "#636FA4"
+        ],
+        "whatliesBeyond": [
+            "#F0F2F0",
+            "#000C40"
+        ],
+        "roseanna": [
+            "#FFAFBD",
+            "#ffc3a0"
+        ],
+        "honeyDew": [
+            "#43C6AC",
+            "#F8FFAE"
+        ],
+        "undertheLake": [
+            "#093028",
+            "#237A57"
+        ],
+        "theBlueLagoon": [
+            "#43C6AC",
+            "#191654"
+        ],
+        "canYouFeelTheLoveTonight": [
+            "#4568DC",
+            "#B06AB3"
+        ],
+        "veryBlue": [
+            "#0575E6",
+            "#021B79"
+        ],
+        "loveandLiberty": [
+            "#200122",
+            "#6f0000"
+        ],
+        "orca": [
+            "#44A08D",
+            "#093637"
+        ],
+        "venice": [
+            "#6190E8",
+            "#A7BFE8"
+        ],
+        "pacificDream": [
+            "#34e89e",
+            "#0f3443"
+        ],
+        "learningandLeading": [
+            "#F7971E",
+            "#FFD200"
+        ],
+        "celestial": [
+            "#C33764",
+            "#1D2671"
+        ],
+        "purplepine": [
+            "#20002c",
+            "#cbb4d4"
+        ],
+        "shalala": [
+            "#D66D75",
+            "#E29587"
+        ],
+        "mini": [
+            "#30E8BF",
+            "#FF8235"
+        ],
+        "maldives": [
+            "#B2FEFA",
+            "#0ED2F7"
+        ],
+        "cinnamint": [
+            "#4AC29A",
+            "#BDFFF3"
+        ],
+        "html": [
+            "#E44D26",
+            "#F16529"
+        ],
+        "coal": [
+            "#EB5757",
+            "#000000"
+        ],
+        "sunkist": [
+            "#F2994A",
+            "#F2C94C"
+        ],
+        "blueSkies": [
+            "#56CCF2",
+            "#2F80ED"
+        ],
+        "chittyChittyBangBang": [
+            "#007991",
+            "#78ffd6"
+        ],
+        "visionsofGrandeur": [
+            "#000046",
+            "#1CB5E0"
+        ],
+        "crystalClear": [
+            "#159957",
+            "#155799"
+        ],
+        "mello": [
+            "#c0392b",
+            "#8e44ad"
+        ],
+        "compareNow": [
+            "#EF3B36",
+            "#FFFFFF"
+        ],
+        "meridian": [
+            "#283c86",
+            "#45a247"
+        ],
+        "relay": [
+            "#3A1C71",
+            "#D76D77",
+            "#FFAF7B"
+        ],
+        "alive": [
+            "#CB356B",
+            "#BD3F32"
+        ],
+        "scooter": [
+            "#36D1DC",
+            "#5B86E5"
+        ],
+        "terminal": [
+            "#000000",
+            "#0f9b0f"
+        ],
+        "telegram": [
+            "#1c92d2",
+            "#f2fcfe"
+        ],
+        "crimsonTide": [
+            "#642B73",
+            "#C6426E"
+        ],
+        "socialive": [
+            "#06beb6",
+            "#48b1bf"
+        ],
+        "subu": [
+            "#0cebeb",
+            "#20e3b2",
+            "#29ffc6"
+        ],
+        "brokenHearts": [
+            "#d9a7c7",
+            "#fffcdc"
+        ],
+        "kimobyIsTheNewBlue": [
+            "#396afc",
+            "#2948ff"
+        ],
+        "dull": [
+            "#C9D6FF",
+            "#E2E2E2"
+        ],
+        "purpink": [
+            "#7F00FF",
+            "#E100FF"
+        ],
+        "orangeCoral": [
+            "#ff9966",
+            "#ff5e62"
+        ],
+        "summer": [
+            "#22c1c3",
+            "#fdbb2d"
+        ],
+        "kingYna": [
+            "#1a2a6c",
+            "#b21f1f",
+            "#fdbb2d"
+        ],
+        "velvetSun": [
+            "#e1eec3",
+            "#f05053"
+        ],
+        "zinc": [
+            "#ADA996",
+            "#F2F2F2",
+            "#DBDBDB",
+            "#EAEAEA"
+        ],
+        "hydrogen": [
+            "#667db6",
+            "#0082c8",
+            "#0082c8",
+            "#667db6"
+        ],
+        "argon": [
+            "#03001e",
+            "#7303c0",
+            "#ec38bc",
+            "#fdeff9"
+        ],
+        "lithium": [
+            "#6D6027",
+            "#D3CBB8"
+        ],
+        "digitalWater": [
+            "#74ebd5",
+            "#ACB6E5"
+        ],
+        "orangeFun": [
+            "#fc4a1a",
+            "#f7b733"
+        ],
+        "rainbowBlue": [
+            "#00F260",
+            "#0575E6"
+        ],
+        "pinkFlavour": [
+            "#800080",
+            "#ffc0cb"
+        ],
+        "sulphur": [
+            "#CAC531",
+            "#F3F9A7"
+        ],
+        "selenium": [
+            "#3C3B3F",
+            "#605C3C"
+        ],
+        "delicate": [
+            "#D3CCE3",
+            "#E9E4F0"
+        ],
+        "ohhappiness": [
+            "#00b09b",
+            "#96c93d"
+        ],
+        "lawrencium": [
+            "#0f0c29",
+            "#302b63",
+            "#24243e"
+        ],
+        "relaxingred": [
+            "#fffbd5",
+            "#b20a2c"
+        ],
+        "taranTado": [
+            "#23074d",
+            "#cc5333"
+        ],
+        "bighead": [
+            "#c94b4b",
+            "#4b134f"
+        ],
+        "sublimeVivid": [
+            "#FC466B",
+            "#3F5EFB"
+        ],
+        "sublimeLight": [
+            "#FC5C7D",
+            "#6A82FB"
+        ],
+        "punYeta": [
+            "#108dc7",
+            "#ef8e38"
+        ],
+        "quepal": [
+            "#11998e",
+            "#38ef7d"
+        ],
+        "sandtoBlue": [
+            "#3E5151",
+            "#DECBA4"
+        ],
+        "weddingDayBlues": [
+            "#40E0D0",
+            "#FF8C00",
+            "#FF0080"
+        ],
+        "shifter": [
+            "#bc4e9c",
+            "#f80759"
+        ],
+        "redSunset": [
+            "#355C7D",
+            "#6C5B7B",
+            "#C06C84"
+        ],
+        "moonPurple": [
+            "#4e54c8",
+            "#8f94fb"
+        ],
+        "pureLust": [
+            "#333333",
+            "#dd1818"
+        ],
+        "slightOceanView": [
+            "#a8c0ff",
+            "#3f2b96"
+        ],
+        "expresso": [
+            "#ad5389",
+            "#3c1053"
+        ],
+        "shifty": [
+            "#636363",
+            "#a2ab58"
+        ],
+        "vanusa": [
+            "#DA4453",
+            "#89216B"
+        ],
+        "eveningNight": [
+            "#005AA7",
+            "#FFFDE4"
+        ],
+        "magic": [
+            "#59C173",
+            "#a17fe0",
+            "#5D26C1"
+        ],
+        "margo": [
+            "#FFEFBA",
+            "#FFFFFF"
+        ],
+        "blueRaspberry": [
+            "#00B4DB",
+            "#0083B0"
+        ],
+        "citrusPeel": [
+            "#FDC830",
+            "#F37335"
+        ],
+        "sinCityRed": [
+            "#ED213A",
+            "#93291E"
+        ],
+        "rastafari": [
+            "#1E9600",
+            "#FFF200",
+            "#FF0000"
+        ],
+        "summerDog": [
+            "#a8ff78",
+            "#78ffd6"
+        ],
+        "wiretap": [
+            "#8A2387",
+            "#E94057",
+            "#F27121"
+        ],
+        "burningOrange": [
+            "#FF416C",
+            "#FF4B2B"
+        ],
+        "ultraVoilet": [
+            "#654ea3",
+            "#eaafc8"
+        ],
+        "byDesign": [
+            "#009FFF",
+            "#ec2F4B"
+        ],
+        "kyooTah": [
+            "#544a7d",
+            "#ffd452"
+        ],
+        "kyeMeh": [
+            "#8360c3",
+            "#2ebf91"
+        ],
+        "kyooPal": [
+            "#dd3e54",
+            "#6be585"
+        ],
+        "metapolis": [
+            "#659999",
+            "#f4791f"
+        ],
+        "flare": [
+            "#f12711",
+            "#f5af19"
+        ],
+        "witchingHour": [
+            "#c31432",
+            "#240b36"
+        ],
+        "azurLane": [
+            "#7F7FD5",
+            "#86A8E7",
+            "#91EAE4"
+        ],
+        "neuromancer": [
+            "#f953c6",
+            "#b91d73"
+        ],
+        "harvey": [
+            "#1f4037",
+            "#99f2c8"
+        ],
+        "amin": [
+            "#8E2DE2",
+            "#4A00E0"
+        ],
+        "memariani": [
+            "#aa4b6b",
+            "#6b6b83",
+            "#3b8d99"
+        ],
+        "yoda": [
+            "#FF0099",
+            "#493240"
+        ],
+        "coolSky": [
+            "#2980B9",
+            "#6DD5FA",
+            "#FFFFFF"
+        ],
+        "darkOcean": [
+            "#373B44",
+            "#4286f4"
+        ],
+        "eveningSunshine": [
+            "#b92b27",
+            "#1565C0"
+        ],
+        "jshine": [
+            "#12c2e9",
+            "#c471ed",
+            "#f64f59"
+        ],
+        "moonlitAsteroid": [
+            "#0F2027",
+            "#203A43",
+            "#2C5364"
+        ],
+        "megatron": [
+            "#C6FFDD",
+            "#FBD786",
+            "#f7797d"
+        ],
+        "coolBlues": [
+            "#2193b0",
+            "#6dd5ed"
+        ],
+        "piggyPink": [
+            "#ee9ca7",
+            "#ffdde1"
+        ],
+        "gradeGrey": [
+            "#bdc3c7",
+            "#2c3e50"
+        ],
+        "telko": [
+            "#F36222",
+            "#5CB644",
+            "#007FC3"
+        ],
+        "zenta": [
+            "#2A2D3E",
+            "#FECB6E"
+        ],
+        "electricPeacock": [
+            "#8a2be2",
+            "#0000cd",
+            "#228b22",
+            "#ccff00"
+        ],
+        "underBlueGreen": [
+            "#051937",
+            "#004d7a",
+            "#008793",
+            "#00bf72",
+            "#a8eb12"
+        ],
+        "lensod": [
+            "#6025F5",
+            "#FF5555"
+        ],
+        "newspaper": [
+            "#8a2be2",
+            "#ffa500",
+            "#f8f8ff"
+        ],
+        "darkBlueGradient": [
+            "#2774ae",
+            "#002E5D",
+            "#002E5D"
+        ],
+        "darkBluTwo": [
+            "#004680",
+            "#4484BA"
+        ],
+        "lemonLime": [
+            "#7ec6bc",
+            "#ebe717"
+        ],
+        "beleko": [
+            "#ff1e56",
+            "#f9c942",
+            "#1e90ff"
+        ],
+        "mangoPapaya": [
+            "#de8a41",
+            "#2ada53"
+        ],
+        "unicornRainbow": [
+            "#f7f0ac",
+            "#acf7f0",
+            "#f0acf7"
+        ],
+        "flame": [
+            "#ff0000",
+            "#fdcf58"
+        ],
+        "blueRed": [
+            "#36B1C7",
+            "#960B33"
+        ],
+        "twitter": [
+            "#1DA1F2",
+            "#009ffc"
+        ],
+        "blooze": [
+            "#6da6be",
+            "#4b859e",
+            "#6da6be"
+        ],
+        "blueSlate": [
+            "#B5B9FF",
+            "#2B2C49"
+        ],
+        "spaceLightGreen": [
+            "#9FA0A8",
+            "#5C7852"
+        ],
+        "flower": [
+            "#DCFFBD",
+            "#CC86D1"
+        ],
+        "peachSea": [
+            "#E6AE8C",
+            "#A8CECF"
+        ],
+        "abbas": [
+            "#00fff0",
+            "#0083fe"
+        ],
+        "winterWoods": [
+            "#333333",
+            "#a2ab58",
+            "#A43931"
+        ],
+        "ameena": [
+            "#0c0c6d",
+            "#de512b",
+            "#98d0c1",
+            "#5bb226",
+            "#023c0d"
+        ],
+        "emeraldSea": [
+            "#05386b",
+            "#5cdb95"
+        ],
+        "bleem": [
+            "#4284DB",
+            "#29EAC4"
+        ],
+        "coffeeGold": [
+            "#554023",
+            "#c99846"
+        ],
+        "compass": [
+            "#516b8b",
+            "#056b3b"
+        ],
+        "andreuzzas": [
+            "#D70652",
+            "#FF025E"
+        ],
+        "moonwalker": [
+            "#152331",
+            "#000000"
+        ],
+        "whinehouse": [
+            "#f7f7f7",
+            "#b9a0a0",
+            "#794747",
+            "#4e2020",
+            "#111111"
+        ],
+        "hyperBlue": [
+            "#59CDE9",
+            "#0A2A88"
+        ],
+        "racker": [
+            "#EB0000",
+            "#95008A",
+            "#3300FC"
+        ],
+        "aftertheRain": [
+            "#ff75c3",
+            "#ffa647",
+            "#ffe83f",
+            "#9fff5b",
+            "#70e2ff",
+            "#cd93ff"
+        ],
+        "neonGreen": [
+            "#81ff8a",
+            "#64965e"
+        ],
+        "dustyGrass": [
+            "#d4fc79",
+            "#96e6a1"
+        ],
+        "visualBlue": [
+            "#003d4d",
+            "#00c996"
+        ]
+    },
+    "instagramMainGradients": {
+        "instagram": [
+            "#b92bcd",
+            "#fa8a36"
+        ],
+        "blue": [
+            "#b82bcf",
+            "#49acff"
+        ],
+        "green": [
+            "#4fb223",
+            "#28c3f1"
+        ],
+        "red": [
+            "#da444f",
+            "#fcc75d"
+        ],
+        "pink": [
+            "#b92bcd",
+            "#fe6778"
+        ],
+        "rainbow": [
+            "#d8454f",
+            "#f08c34",
+            "#f2bf56",
+            "#7bba4f",
+            "#3f98d0",
+            "#7c38cb",
+            "#9e0bb4"
+        ]
+    }
+}

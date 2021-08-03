@@ -8,11 +8,12 @@ var __createBinding = (this && this.__createBinding) || (Object.create ? (functi
     o[k2] = m[k];
 }));
 exports.__esModule = true;
-exports.getUiGradientColors = exports.getUi = exports.grabientMainGradients = void 0;
+exports.instagramMainGradients = exports.uiMainGradients = exports.grabientMainGradients = void 0;
 // Exports
 var grabient_variables_1 = require("./grabient-variables");
 __createBinding(exports, grabient_variables_1, "grabientMainGradients");
 var uigradients_variables_1 = require("./uigradients-variables");
-__createBinding(exports, uigradients_variables_1, "getUi");
-__createBinding(exports, uigradients_variables_1, "getUiGradientColors");
+__createBinding(exports, uigradients_variables_1, "uiMainGradients");
+var instagram_variables_1 = require("./instagram-variables");
+__createBinding(exports, instagram_variables_1, "instagramMainGradients");
 //# sourceMappingURL=index.js.map

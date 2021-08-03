@@ -21,15 +21,18 @@ var __importStar = (this && this.__importStar) || function (mod) {
 exports.__esModule = true;
 // Import the colors and file
 var colors = __importStar(require("."));
+var gradients = __importStar(require("./gradients"));
 var logs_1 = require("./functions/logs");
 var fs_1 = require("fs");
 // Convert to JSON
-var json = JSON.stringify(colors);
+var colorsJSON = JSON.stringify(colors, null, 4);
+var gradientsJSON = JSON.stringify(gradients, null, 4); // Don't matter if there are functions because in the JSON doesn't appear
 try {
-    console.log('');
-    logs_1.info('Creating "colors.json" file ...');
-    fs_1.writeFileSync('./test/colors.json', json);
-    logs_1.success('"colors.json" file created');
+    logs_1.enter();
+    logs_1.info('Creating "colors.json" and "gradients.json" files ...');
+    fs_1.writeFileSync('./test/colors.json', colorsJSON);
+    fs_1.writeFileSync('./test/gradients.json', gradientsJSON);
+    logs_1.success('"colors.json" and "gradients.json" files created');
 }
 catch (err) {
     logs_1.error("" + err);

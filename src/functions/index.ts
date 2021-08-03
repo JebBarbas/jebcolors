@@ -5,7 +5,8 @@
 export {
     normalize,
     clean,
-    percentage
+    percentage,
+    deg,
 } from './functions'
 
 export {

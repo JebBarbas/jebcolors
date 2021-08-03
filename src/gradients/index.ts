@@ -6,6 +6,9 @@ export {
 } from './grabient-variables'
 
 export {
-    getUi,
-    getUiGradientColors,
+    uiMainGradients,
 } from './uigradients-variables'
+
+export {
+    instagramMainGradients,
+} from './instagram-variables'

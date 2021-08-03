@@ -1,2 +1,3 @@
 export { grabientMainGradients, } from './grabient-variables';
-export { getUi, getUiGradientColors, } from './uigradients-variables';
+export { uiMainGradients, } from './uigradients-variables';
+export { instagramMainGradients, } from './instagram-variables';

@@ -1,7 +1,7 @@
 "use strict";
 // Module to display in console with some color centain information
 exports.__esModule = true;
-exports.success = exports.error = exports.warning = exports.info = void 0;
+exports.enter = exports.success = exports.error = exports.warning = exports.info = void 0;
 // Imports
 require("colors");
 // Default Values
@@ -32,4 +32,8 @@ var success = function (text) {
     console.log(log);
 };
 exports.success = success;
+var enter = function () {
+    console.log('');
+};
+exports.enter = enter;
 //# sourceMappingURL=logs.js.map

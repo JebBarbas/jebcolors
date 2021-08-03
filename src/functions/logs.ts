@@ -31,3 +31,7 @@ export const success = (text:string) => {
     const log = `${icons.success} ${text}`.green
     console.log(log)
 }
+
+export const enter = () => {
+    console.log('')
+}

@@ -33,6 +33,9 @@ const pyYellow = "#ffd849"
 const nodeGreen = "#215732"
 const reactBlue = "#61dafb"
 const vueGreen = "#42b883"
+const angularRed = "#dd0531"
+const azureBlue = "#007fff"
+const svelteOrange = "#ff3d00"
 
 // Exports
 export const languageMainColors = {
@@ -68,4 +71,7 @@ export const languageMainColors = {
     nodeGreen,
     reactBlue,
     vueGreen,
+    angularRed,
+    azureBlue,
+    svelteOrange,
 }
