@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/JebBarbas/jebcolors/compare/v2.2.1...v2.3.0) (2021-08-03)
+
+
+### Features
+
+* Added uiGradients variables instead of functions 🎈 ([ab1aa55](https://github.com/JebBarbas/jebcolors/commit/ab1aa550db2f779a796b8b5b4fd3ab5a05d2521f))
+
 ### [2.2.1](https://github.com/JebBarbas/jebcolors/compare/v2.2.0...v2.2.1) (2021-08-01)
 
 

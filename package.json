@@ -1,6 +1,6 @@
 {
   "name": "jebcolors",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "description": "jebcolors is a module that provides a lot of colors, like the bootstrap colors, the web colors or a lot of colors that I personally wrote, like my own colors, social media colors and some languages colors. It also provides gradients from grabient, instagram and uigradients. And functions to use with the colors, like rgb() or light(). This module was originally written by me to use it with react-native, but you can use it with a lot of another node modules like react.",
   "main": "dist/index.js",
   "scripts": {
