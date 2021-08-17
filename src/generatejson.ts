@@ -1,5 +1,5 @@
 // Import the colors and file
-import * as colors from '.'
+import * as colors from './colors'
 import * as gradients from './gradients'
 import { info, success, error, enter } from './functions/logs'
 import { writeFileSync } from 'fs'

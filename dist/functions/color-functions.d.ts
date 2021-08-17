@@ -133,3 +133,4 @@ export declare const hsl: (hue: number, saturation: number, lightness: number) =
  * light("#780000", 1.5) // "#b40000"
  */
 export declare const light: (hexCode: string, factor: number) => string;
+//# sourceMappingURL=color-functions.d.ts.map

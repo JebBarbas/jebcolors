@@ -28,3 +28,4 @@ export declare const bootstrapGrayColors: {
     gray800: string;
     gray900: string;
 };
+//# sourceMappingURL=bootstrap-variables.d.ts.map

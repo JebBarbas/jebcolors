@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h3, div{
+    padding: 1%;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1.5em;
+    text-align: center;
+}
+
+.box:hover{
+    transform: scale(1.2)
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.white {
+    color: white;
+}

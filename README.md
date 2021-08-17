@@ -18,9 +18,9 @@ npm i jebcolors
 ## Quick Start - Import Colors
 You can import the module either using `import` or `require`.
 ```javascript
-import { jebcMainColors } from 'jebcolors'
+import { jebcMainColors, uiMainGradients, rgb } from 'jebcolors'
 // OR
-const { jebcMainColors } = require('jebcolors')
+const { jebcMainColors, uiMainGradients, rgb } = require('jebcolors')
 ```
 
 ## Quick Start - Usage
@@ -66,7 +66,7 @@ There are 272 colors divided in 8 Color Groups.
 - languageMainColors (The main colors from some languages, like "jsYellow", "pyBlue" or "javaRed") (26 colors)
 
 ## Gradients
-In version 2.0.0+ you can use also gradients, importing `jebcolors/dist/gradients`.
+In version 2.0.0+ you can use also gradients.
 
 There are 401 gradients in 3 Gradient Groups.
 - grabientMainGradients (grabient's gradients, like "sweetOrange", "strongRed" or "magicThree") (14 gradients)
@@ -78,7 +78,7 @@ In this example I'm going to apply two different gradients (one from grabient an
 import React from 'react'
 import { Text, View } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
-import { grabientMainGradients, uiMainGradients } from 'jebcolors/dist/gradients'
+import { grabientMainGradients, uiMainGradients } from 'jebcolors'
 
 const App = () => (
     <View>
@@ -95,10 +95,10 @@ export default App
 ```
 
 ## Functions
-In version 2.0.0+ you can use also some color-relationated functions, importing `jebcolors/dist/functions`.
+In version 2.0.0+ you can use also some color-relationated functions.
 In this example, I'g going to show the rgb, hsl and light functions.
 ```javascript
-import {rgb, hsl, light} from 'jebcolors/dist/functions'
+import {rgb, hsl, light} from 'jebcolors'
 
 const primaryColor = rgb(100, 200, 250)
 const secondaryColor = hsl(1,0.5,0.5)
@@ -128,10 +128,10 @@ In version 2.3.0+, it also works with gradients, makes the same as colors, but t
 ### npm run getgradients
 The gradients from uiGradients are stored in a file in './gradients/uigradients-variables', but this colors are from the [official uiGradients repository](https://raw.githubusercontent.com/ghosh/uiGradients/master/gradients.json), to avoid using async functions when you use this module, the gradients are fetched in dev-time running `npm run getgradients`, this script fetches all the gradients and saves the result in a file that is going to be compiled and where are going to be the gradients.
 
-### npm run compile
+### npm run build
 Is used to compile all the TypeScript files.
 
-### npm run compileall
+### npm run buildall
 - First, compiles all the files (this is to update the getfiles.ts files)
 - Then, fetches the gradients (with the compiled file getfiles.js) and creates "uigradients-variables.ts" in src.
 - Compiles all the TypeScript again in the project (principally, the new generated "uigradients-variables.ts" file).

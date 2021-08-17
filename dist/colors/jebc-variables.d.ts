@@ -33,3 +33,4 @@ export declare const jebcUnusedColors: {
     coral2: string;
     gold: string;
 };
+//# sourceMappingURL=jebc-variables.d.ts.map

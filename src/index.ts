@@ -1,29 +1,44 @@
-// Principal module that exports the colors
+// Principal module that exports all things
 
-// Exports
+// Imports
 export {
+    bootstrapGrayColors,
     bootstrapMainColors,
     bootstrapUnusedColors,
-    bootstrapGrayColors,
-} from './colors/bootstrap-variables'
 
-export {
+    consoleMainColors,
+
     jebcMainColors,
     jebcUnusedColors,
-} from './colors/jebc-variables'
 
-export {
-    consoleMainColors
-} from './colors/console-variables'
-
-export {
-    webMainColors
-} from './colors/web-variables'
-
-export {
-    socialMainColors
-} from './colors/social-variables'
-
-export {
     languageMainColors,
-} from './colors/language-variables'
+
+    socialMainColors,
+
+    webMainColors,
+} from './colors'
+
+export {
+    clean,
+    deg,
+    fixHexCode,
+    getBlueValue,
+    getGreenValue,
+    getRedValue,
+    hsl,
+    hslToRgb,
+    isValidHexCode,
+    light,
+    normalize,
+    normalizeColorValue,
+    normalizeHSLValue,
+    percentage,
+    rgb,
+    rgbToHsl,
+} from './functions'
+
+export {
+    grabientMainGradients,
+    instagramMainGradients,
+    uiMainGradients,
+} from './gradients'

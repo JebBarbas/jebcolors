@@ -1,6 +1,4 @@
-export { bootstrapMainColors, bootstrapUnusedColors, bootstrapGrayColors, } from './colors/bootstrap-variables';
-export { jebcMainColors, jebcUnusedColors, } from './colors/jebc-variables';
-export { consoleMainColors } from './colors/console-variables';
-export { webMainColors } from './colors/web-variables';
-export { socialMainColors } from './colors/social-variables';
-export { languageMainColors, } from './colors/language-variables';
+export { bootstrapGrayColors, bootstrapMainColors, bootstrapUnusedColors, consoleMainColors, jebcMainColors, jebcUnusedColors, languageMainColors, socialMainColors, webMainColors, } from './colors';
+export { clean, deg, fixHexCode, getBlueValue, getGreenValue, getRedValue, hsl, hslToRgb, isValidHexCode, light, normalize, normalizeColorValue, normalizeHSLValue, percentage, rgb, rgbToHsl, } from './functions';
+export { grabientMainGradients, instagramMainGradients, uiMainGradients, } from './gradients';
+//# sourceMappingURL=index.d.ts.map

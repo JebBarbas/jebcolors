@@ -16,3 +16,4 @@ export declare const consoleMainColors: {
     fuchsia: string;
     purple: string;
 };
+//# sourceMappingURL=console-variables.d.ts.map

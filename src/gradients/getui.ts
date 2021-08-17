@@ -2,6 +2,7 @@ import fetch from 'node-fetch'
 import { writeFileSync } from 'fs'
 import { join } from 'path'
 import { isValidHexCode } from '../functions'
+import { variablelify } from 'helpscript'
 
 // Consts
 const fetchLink = "https://raw.githubusercontent.com/ghosh/uiGradients/master/gradients.json"
@@ -11,33 +12,6 @@ type gradientType = {
     name: string,
     colors: string[]
 } 
-
-const escapeRegExp = (string:string) => {
-    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
-}
-
-const snake = (colorName: string):string => {
-    let words = colorName.split(' ')
-    words[0] = words[0].toLowerCase()
-    let name = words.join('')
-
-    // Some names had symbols and numbers, put them here and how to scape them
-    const replace = {
-        '&': 'And',
-        '+': 'Plus',
-        '50': 'fifty',
-        "'": '',
-        '80': 'eighty'
-    }
-
-    Object.entries(replace).forEach(entry => {
-        const [bad, replace] = entry
-        const regexp = new RegExp(escapeRegExp(bad),'g')
-        name = name.replace(regexp,replace)
-    })
-
-    return name
-}
 
 const literalArray = (arrayOfStrings:string[]):string => {
     let text = '['
@@ -65,7 +39,7 @@ const main = async () => {
 
         if(!validGradient) return
 
-        const colorName = snake(gradient.name)
+        const colorName = variablelify(gradient.name)
         fileText += `const ${colorName} = ${literalArray(gradient.colors)}\n`
         colorNames.push(colorName)
     })

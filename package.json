@@ -8,8 +8,8 @@
     "generatejson": "npm run test && node ./dist/generatejson.js",
     "watchcolors": "npm run generatejson && node ./dist/watchcolors.js && npx serve test",
     "getgradients": "node ./dist/gradients/getui.js",
-    "compile": "tsc",
-    "compileall": "npm run compile && npm run getgradients && npm run compile && npm run generatejson",
+    "build": "tsc",
+    "buildall": "npm run build && npm run getgradients && npm run build && npm run generatejson",
     "release": "standard-version",
     "compartir": "git push --follow-tags origin main && npm publish",
     "history": "git log --oneline --decorate --all --graph"
@@ -37,6 +37,7 @@
     "@types/node": "^16.4.7",
     "@types/node-fetch": "^2.5.12",
     "colors": "^1.4.0",
+    "helpscript": "^1.0.1",
     "node-fetch": "^2.6.1",
     "standard-version": "^9.3.1",
     "tslint": "^6.1.3",

@@ -206,3 +206,4 @@ export declare const brandSocialColors: {
     youtubeRed: string;
     youtubeBlack: string;
 };
+//# sourceMappingURL=brand-variables.d.ts.map

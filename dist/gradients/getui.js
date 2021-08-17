@@ -43,30 +43,9 @@ var node_fetch_1 = __importDefault(require("node-fetch"));
 var fs_1 = require("fs");
 var path_1 = require("path");
 var functions_1 = require("../functions");
+var helpscript_1 = require("helpscript");
 // Consts
 var fetchLink = "https://raw.githubusercontent.com/ghosh/uiGradients/master/gradients.json";
-var escapeRegExp = function (string) {
-    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
-};
-var snake = function (colorName) {
-    var words = colorName.split(' ');
-    words[0] = words[0].toLowerCase();
-    var name = words.join('');
-    // Some names had symbols and numbers, put them here and how to scape them
-    var replace = {
-        '&': 'And',
-        '+': 'Plus',
-        '50': 'fifty',
-        "'": '',
-        '80': 'eighty'
-    };
-    Object.entries(replace).forEach(function (entry) {
-        var bad = entry[0], replace = entry[1];
-        var regexp = new RegExp(escapeRegExp(bad), 'g');
-        name = name.replace(regexp, replace);
-    });
-    return name;
-};
 var literalArray = function (arrayOfStrings) {
     var text = '[';
     arrayOfStrings.forEach(function (string) {
@@ -96,7 +75,7 @@ var main = function () { return __awaiter(void 0, void 0, void 0, function () {
                     });
                     if (!validGradient)
                         return;
-                    var colorName = snake(gradient.name);
+                    var colorName = helpscript_1.variablelify(gradient.name);
                     fileText += "const " + colorName + " = " + literalArray(gradient.colors) + "\n";
                     colorNames.push(colorName);
                 });

@@ -20,7 +20,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 exports.__esModule = true;
 // Import the colors and file
-var colors = __importStar(require("."));
+var colors = __importStar(require("./colors"));
 var gradients = __importStar(require("./gradients"));
 var logs_1 = require("./functions/logs");
 var fs_1 = require("fs");

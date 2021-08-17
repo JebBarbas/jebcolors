@@ -6,7 +6,7 @@ import { isValidHexCode } from './functions'
 import { info, warning, error, success, enter } from './functions/logs'
 
 // Import the colors
-import * as colors from '.'
+import * as colors from './colors'
 import * as gradients from './gradients'
 import * as functions from './functions'
 

@@ -204,7 +204,7 @@
             "#2193b0",
             "#6dd5ed"
         ],
-        "blooker20": [
+        "blookertwenty": [
             "#e65c00",
             "#F9D423"
         ],
@@ -221,11 +221,11 @@
             "#79CBCA",
             "#E684AE"
         ],
-        "noontoDusk": [
+        "noonToDusk": [
             "#ff6e7f",
             "#bfe9ff"
         ],
-        "youtube": [
+        "youTube": [
             "#e52d27",
             "#b31217"
         ],
@@ -237,7 +237,7 @@
             "#16A085",
             "#F4D03F"
         ],
-        "playingwithReds": [
+        "playingWithReds": [
             "#D31027",
             "#EA384D"
         ],
@@ -555,7 +555,7 @@
             "#B3FFAB",
             "#12FFF7"
         ],
-        "manofSteel": [
+        "manOfSteel": [
             "#780206",
             "#061161"
         ],
@@ -575,7 +575,7 @@
             "#00c6ff",
             "#0072ff"
         ],
-        "soundcloud": [
+        "soundCloud": [
             "#fe8c00",
             "#f83600"
         ],
@@ -583,7 +583,7 @@
             "#52c234",
             "#061700"
         ],
-        "servquick": [
+        "servQuick": [
             "#485563",
             "#29323c"
         ],
@@ -627,7 +627,7 @@
             "#43cea2",
             "#185a9d"
         ],
-        "pastelOrangeattheSun": [
+        "pastelOrangeAtTheSun": [
             "#ffb347",
             "#ffcc33"
         ],
@@ -653,7 +653,7 @@
             "#00bf8f",
             "#001510"
         ],
-        "turquoiseflow": [
+        "turquoiseFlow": [
             "#136a8a",
             "#267871"
         ],
@@ -673,7 +673,7 @@
             "#F1F2B5",
             "#135058"
         ],
-        "greentodark": [
+        "greenToDark": [
             "#6A9113",
             "#141517"
         ],
@@ -681,7 +681,7 @@
             "#004FF9",
             "#FFF94C"
         ],
-        "curiosityblue": [
+        "curiosityBlue": [
             "#525252",
             "#3d72b4"
         ],
@@ -701,7 +701,7 @@
             "#CCCCB2",
             "#757519"
         ],
-        "betweenNightandDay": [
+        "betweenNightAndDay": [
             "#2c3e50",
             "#3498db"
         ],
@@ -741,7 +741,7 @@
             "#FFB75E",
             "#ED8F03"
         ],
-        "greenandBlue": [
+        "greenAndBlue": [
             "#c2e59c",
             "#64b3f4"
         ],
@@ -749,7 +749,7 @@
             "#403A3E",
             "#BE5869"
         ],
-        "backtotheFuture": [
+        "backToTheFuture": [
             "#C02425",
             "#F0CB35"
         ],
@@ -921,7 +921,7 @@
             "#f85032",
             "#e73827"
         ],
-        "sunontheHorizon": [
+        "sunOnTheHorizon": [
             "#fceabb",
             "#f8b500"
         ],
@@ -933,7 +933,7 @@
             "#ffd89b",
             "#19547b"
         ],
-        "fiftyShadesofGrey": [
+        "fiftyShadesOfGrey": [
             "#bdc3c7",
             "#2c3e50"
         ],
@@ -977,7 +977,7 @@
             "#00c3ff",
             "#ffff1c"
         ],
-        "blackRosé": [
+        "blackRose": [
             "#f4c4f3",
             "#fc67fa"
         ],
@@ -1019,7 +1019,7 @@
             "#c0c0aa",
             "#1cefff"
         ],
-        "easymed": [
+        "easyMed": [
             "#DCE35B",
             "#45B649"
         ],
@@ -1027,7 +1027,7 @@
             "#E8CBC0",
             "#636FA4"
         ],
-        "whatliesBeyond": [
+        "whatLiesBeyond": [
             "#F0F2F0",
             "#000C40"
         ],
@@ -1039,7 +1039,7 @@
             "#43C6AC",
             "#F8FFAE"
         ],
-        "undertheLake": [
+        "underTheLake": [
             "#093028",
             "#237A57"
         ],
@@ -1055,7 +1055,7 @@
             "#0575E6",
             "#021B79"
         ],
-        "loveandLiberty": [
+        "loveAndLiberty": [
             "#200122",
             "#6f0000"
         ],
@@ -1071,7 +1071,7 @@
             "#34e89e",
             "#0f3443"
         ],
-        "learningandLeading": [
+        "learningAndLeading": [
             "#F7971E",
             "#FFD200"
         ],
@@ -1083,7 +1083,7 @@
             "#20002c",
             "#cbb4d4"
         ],
-        "shalala": [
+        "shaLaLa": [
             "#D66D75",
             "#E29587"
         ],
@@ -1119,7 +1119,7 @@
             "#007991",
             "#78ffd6"
         ],
-        "visionsofGrandeur": [
+        "visionsOfGrandeur": [
             "#000046",
             "#1CB5E0"
         ],
@@ -1265,7 +1265,7 @@
             "#302b63",
             "#24243e"
         ],
-        "relaxingred": [
+        "relaxingRed": [
             "#fffbd5",
             "#b20a2c"
         ],
@@ -1293,7 +1293,7 @@
             "#11998e",
             "#38ef7d"
         ],
-        "sandtoBlue": [
+        "sandToBlue": [
             "#3E5151",
             "#DECBA4"
         ],
@@ -1323,7 +1323,7 @@
             "#a8c0ff",
             "#3f2b96"
         ],
-        "expresso": [
+        "eXpresso": [
             "#ad5389",
             "#3c1053"
         ],
@@ -1449,7 +1449,7 @@
             "#b92b27",
             "#1565C0"
         ],
-        "jshine": [
+        "jShine": [
             "#12c2e9",
             "#c471ed",
             "#f64f59"
@@ -1459,7 +1459,7 @@
             "#203A43",
             "#2C5364"
         ],
-        "megatron": [
+        "megaTron": [
             "#C6FFDD",
             "#FBD786",
             "#f7797d"
@@ -1623,7 +1623,7 @@
             "#95008A",
             "#3300FC"
         ],
-        "aftertheRain": [
+        "afterTheRain": [
             "#ff75c3",
             "#ffa647",
             "#ffe83f",

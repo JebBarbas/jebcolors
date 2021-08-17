@@ -14,3 +14,4 @@ export declare const grabientMainGradients: {
     magicThree: string[];
     magicFour: string[];
 };
+//# sourceMappingURL=grabient-variables.d.ts.map

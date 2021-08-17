@@ -25,7 +25,7 @@ var assert_1 = require("assert");
 var functions_1 = require("./functions");
 var logs_1 = require("./functions/logs");
 // Import the colors
-var colors = __importStar(require("."));
+var colors = __importStar(require("./colors"));
 var gradients = __importStar(require("./gradients"));
 var functions = __importStar(require("./functions"));
 // Function to maintain the code cleaner

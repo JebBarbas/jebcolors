@@ -26,3 +26,4 @@ export declare const languageMainColors: {
     azureBlue: string;
     svelteOrange: string;
 };
+//# sourceMappingURL=language-variables.d.ts.map
