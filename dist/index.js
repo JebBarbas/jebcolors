@@ -8,7 +8,7 @@ var __createBinding = (this && this.__createBinding) || (Object.create ? (functi
     o[k2] = m[k];
 }));
 exports.__esModule = true;
-exports.uiMainGradients = exports.instagramMainGradients = exports.grabientMainGradients = exports.rgbToHsl = exports.rgb = exports.percentage = exports.normalizeHSLValue = exports.normalizeColorValue = exports.normalize = exports.light = exports.isValidHexCode = exports.hslToRgb = exports.hsl = exports.getRedValue = exports.getGreenValue = exports.getBlueValue = exports.fixHexCode = exports.deg = exports.clean = exports.webMainColors = exports.socialMainColors = exports.languageMainColors = exports.jebcUnusedColors = exports.jebcMainColors = exports.consoleMainColors = exports.bootstrapUnusedColors = exports.bootstrapMainColors = exports.bootstrapGrayColors = void 0;
+exports.uiMainGradients = exports.instagramMainGradients = exports.grabientMainGradients = exports.averageColor = exports.getRelativeLuminance = exports.contrastTest = exports.getRGB = exports.validationRegex = exports.isDarkColor = exports.isValid = exports.rgbToHsl = exports.rgb = exports.percentage = exports.normalizeHSLValue = exports.normalizeColorValue = exports.normalize = exports.light = exports.isValidHexCode = exports.hslToRgb = exports.hsl = exports.getRedValue = exports.getGreenValue = exports.getBlueValue = exports.fixHexCode = exports.deg = exports.clean = exports.webMainColors = exports.socialMainColors = exports.languageMainColors = exports.jebcUnusedColors = exports.jebcMainColors = exports.consoleMainColors = exports.bootstrapUnusedColors = exports.bootstrapMainColors = exports.bootstrapGrayColors = void 0;
 // Imports
 var colors_1 = require("./colors");
 __createBinding(exports, colors_1, "bootstrapGrayColors");
@@ -37,8 +37,26 @@ __createBinding(exports, functions_1, "normalizeHSLValue");
 __createBinding(exports, functions_1, "percentage");
 __createBinding(exports, functions_1, "rgb");
 __createBinding(exports, functions_1, "rgbToHsl");
+__createBinding(exports, functions_1, "isValid");
+__createBinding(exports, functions_1, "isDarkColor");
+__createBinding(exports, functions_1, "validationRegex");
+__createBinding(exports, functions_1, "getRGB");
+__createBinding(exports, functions_1, "contrastTest");
+__createBinding(exports, functions_1, "getRelativeLuminance");
+__createBinding(exports, functions_1, "averageColor");
 var gradients_1 = require("./gradients");
 __createBinding(exports, gradients_1, "grabientMainGradients");
 __createBinding(exports, gradients_1, "instagramMainGradients");
 __createBinding(exports, gradients_1, "uiMainGradients");
+if (typeof window !== 'undefined') {
+    var colors = require('./colors');
+    var gradients = require('./gradients');
+    var functions = require('./functions');
+    var jebcolors = {
+        colors: colors,
+        gradients: gradients,
+        functions: functions
+    };
+    window.jebcolors = jebcolors;
+}
 //# sourceMappingURL=index.js.map

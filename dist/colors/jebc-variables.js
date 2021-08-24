@@ -21,6 +21,7 @@ var tan = "#e8c39e";
 var brown = "#8b4513";
 var black = "#000000";
 var lightGray = "#e9ecef";
+var cherry = "#990033";
 var midnightGreen = "#4e5851";
 var silver2 = "#ebebe3";
 var spaceGrey = "#535150";
@@ -53,6 +54,7 @@ var clay = tan;
 var chocolate = brown;
 var elegant = black;
 var silver = lightGray;
+var sidra = cherry;
 // Exports
 exports.jebcMainColors = {
     magic: magic,
@@ -71,7 +73,8 @@ exports.jebcMainColors = {
     clay: clay,
     chocolate: chocolate,
     elegant: elegant,
-    silver: silver
+    silver: silver,
+    sidra: sidra
 };
 exports.jebcUnusedColors = {
     midnightGreen: midnightGreen,

@@ -46,4 +46,3 @@ export declare const percentage: (value: number, normalizeValue?: boolean | unde
  * deg(719) // 0.997222...
  */
 export declare const deg: (degrees: number) => number;
-//# sourceMappingURL=functions.d.ts.map

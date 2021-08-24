@@ -6,4 +6,3 @@ export declare const instagramMainGradients: {
     pink: string[];
     rainbow: string[];
 };
-//# sourceMappingURL=instagram-variables.d.ts.map

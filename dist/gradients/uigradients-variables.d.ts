@@ -381,4 +381,3 @@ export declare const uiMainGradients: {
     dustyGrass: string[];
     visualBlue: string[];
 };
-//# sourceMappingURL=uigradients-variables.d.ts.map

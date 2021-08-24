@@ -69,7 +69,7 @@ var main = function () { return __awaiter(void 0, void 0, void 0, function () {
                 json.forEach(function (gradient) {
                     var validGradient = true;
                     gradient.colors.forEach(function (color) {
-                        if (!functions_1.isValidHexCode(color)) {
+                        if (!functions_1.isValid(color, 'hexCode')) {
                             validGradient = false;
                         }
                     });

@@ -34,4 +34,3 @@ export declare const socialMainColors: {
     youtube: string;
     microsoft: string;
 };
-//# sourceMappingURL=social-variables.d.ts.map

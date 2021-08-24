@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 import { writeFileSync } from 'fs'
 import { join } from 'path'
-import { isValidHexCode } from '../functions'
+import { isValid } from '../functions'
 import { variablelify } from 'helpscript'
 
 // Consts
@@ -32,7 +32,7 @@ const main = async () => {
     json.forEach(gradient => {
         let validGradient = true
         gradient.colors.forEach(color => {
-            if(!isValidHexCode(color)){
+            if(!isValid(color, 'hexCode')){
                 validGradient = false
             }
         })

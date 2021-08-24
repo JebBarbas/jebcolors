@@ -1,3 +1,3 @@
 export { normalize, clean, percentage, deg, } from './functions';
-export { fixHexCode, getBlueValue, getGreenValue, getRedValue, hsl, hslToRgb, isValidHexCode, light, normalizeColorValue, normalizeHSLValue, rgb, rgbToHsl, } from './color-functions';
-//# sourceMappingURL=index.d.ts.map
+export { fixHexCode, getBlueValue, getGreenValue, getRedValue, hsl, hslToRgb, light, normalizeColorValue, normalizeHSLValue, rgb, rgbToHsl, isDarkColor, getRGB, contrastTest, getRelativeLuminance, averageColor, } from './color-functions';
+export { isValid, isValidHexCode, validationRegex } from './validation-functions';

@@ -16,6 +16,7 @@ export declare const jebcMainColors: {
     chocolate: string;
     elegant: string;
     silver: string;
+    sidra: string;
 };
 export declare const jebcUnusedColors: {
     midnightGreen: string;
@@ -33,4 +34,3 @@ export declare const jebcUnusedColors: {
     coral2: string;
     gold: string;
 };
-//# sourceMappingURL=jebc-variables.d.ts.map

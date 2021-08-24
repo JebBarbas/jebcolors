@@ -1,5 +1,10 @@
 # JebColors
-jebcolors is a module that provides a lot of colors, like the bootstrap colors, the web colors or a lot of colors that I personally wrote, like my own colors, social media colors and some languages colors. It also provides gradients from grabient, instagram and uigradients. And functions to use with the colors, like rgb() or light(). This module was originally written by me to use it with react-native, but you can use it with a lot of another node modules like react.
+jebcolors is a module that provides a lot of colors, like the bootstrap colors, the web colors or a lot of colors 
+that I personally wrote, like my own colors, social media colors and some languages colors. It also provides 
+gradients from grabient, instagram and uigradients. And functions to use with the colors, like `rgb()` or `light()`. 
+This module was originally written by me to use it with react-native, but you can use it with a lot of another node
+modules like react. You can also use the "bundle.js" file and use it in the browser in `window.jebcolors` (contains 
+colors, gradients and functions).
 
 ---
 
@@ -10,10 +15,17 @@ jebcolors is a module that provides a lot of colors, like the bootstrap colors, 
 ![GitHub top language](https://img.shields.io/github/languages/top/jebbarbas/jebcolors)
 ![GitHub Repo stars](https://img.shields.io/github/stars/jebbarbas/jebcolors?style=social)
 
-## Installation
+## Installation - Node
 ```
 npm i jebcolors
 ```
+
+## Instalation - Browser
+You can use the [jsDelivr](https://cdn.jsdelivr.net/npm/jebcolors@2.5.0/dist/bundle.js) cdn to import the bundle.
+```html
+<script src="https://cdn.jsdelivr.net/npm/jebcolors@2.5.0/dist/bundle.js"></script>
+```
+Now jebcolors is available in `window.jebcolors`.
 
 ## Quick Start - Import Colors
 You can import the module either using `import` or `require`.
@@ -23,8 +35,8 @@ import { jebcMainColors, uiMainGradients, rgb } from 'jebcolors'
 const { jebcMainColors, uiMainGradients, rgb } = require('jebcolors')
 ```
 
-## Quick Start - Usage
-To use this module you only import the group of colors that you prefer (see "ColorGroups") and select the color you want. In this example I'm going to use the "light" color of bootstrap and the "magic" color of jebc, and I'm going to use them in an example of a react-native Stylesheet.
+## Quick Start - Usage in Node
+To use this module you only import the group of colors that you prefer (see "ColorGroups") and select the color you want. In this example I'm going to use the `light` color of bootstrap and the `magic` color of jebc, and I'm going to use them in an example of a react-native Stylesheet.
 ```jsx
 import React from "react"
 import { StyleSheet, Text, View } from "react-native"
@@ -53,12 +65,29 @@ const styles = StyleSheet.create({
 export default App;
 ```
 
+## Quick Start - Usage in Browser
+Once the `<script>` tag is put, jebcolors is available in `window.jebcolors`, and inside are the colors, gradients 
+and functions.
+```html
+<script src="path/to/jebcolors/bundle.js"></script>
+<script>
+    const { colors, functions } = jebcolors
+    const divElement = document.querySelector('#divElement')
+
+    const mainColor = colors.bootstrapMainColors.primary
+    const {white, black} = colors.bootstrapUnusedColors
+
+    divElement.style.background = mainColor
+    divElement.style.color = functions.isDarkColor(mainColor) ? white : black
+</script>
+```
+
 ## ColorGroups
-There are 272 colors divided in 8 Color Groups.
+There are 273 colors divided in 8 Color Groups.
 - bootstrapMainColors (bootstrap's colors like "success", "primary" or "dark") (8 colors)
 - bootstrapUnusedColors (bootstrap's unused colors like "purple", "orange" or "teal") (7 colors)
 - bootstrapGrayColors (bootstrap's gray colors like "gray100" - "gray900") (9 colors)
-- jebcMainColors (The colors that are from this module, like "magic", "juice" or "ocean") (17 colors)
+- jebcMainColors (The colors that are from this module, like "magic", "juice" or "ocean") (18 colors)
 - jebcUnusedColors (This colors are some that aren't exported before, like "silver2", "roseGold" and "spaceGrey") (14 colors)
 - consoleColors (The colors that you can use in the Windows CMD, like "red", "blue" or "green") (16 colors)
 - webColors (The web colors like "deepPink", "hotPink" or "pink") (141 colors)
@@ -131,16 +160,24 @@ The gradients from uiGradients are stored in a file in './gradients/uigradients-
 ### npm run build
 Is used to compile all the TypeScript files.
 
+## npm run pack
+Is used to webpack the files.
+
+## npm run copybundle
+Is used to copy the "bundle.js" file from dist to test.
+
 ### npm run buildall
 - First, compiles all the files (this is to update the getfiles.ts files)
 - Then, fetches the gradients (with the compiled file getfiles.js) and creates "uigradients-variables.ts" in src.
 - Compiles all the TypeScript again in the project (principally, the new generated "uigradients-variables.ts" file).
-- Then generates the json and creates "colors.json" & "gradients.json" in test.
+- Generates the json and creates "colors.json" & "gradients.json" in test.
+- Webpacks the files and saves in dist.
+- And finally copies the bundle from dist to test.
 
 ### npm run release
 Changes the package.json in base of the last git commit (see standard-version).
 
-### npm run compartir
+### npm run share
 Pushes the git repository and publishes the package to npm.
 
 ### npm run history

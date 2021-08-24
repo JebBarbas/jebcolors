@@ -35,6 +35,13 @@ export {
     percentage,
     rgb,
     rgbToHsl,
+    isValid,
+    isDarkColor,
+    validationRegex,
+    getRGB,
+    contrastTest,
+    getRelativeLuminance,
+    averageColor,
 } from './functions'
 
 export {
@@ -42,3 +49,17 @@ export {
     instagramMainGradients,
     uiMainGradients,
 } from './gradients'
+
+if(typeof window !== 'undefined'){
+    const colors = require('./colors')
+    const gradients = require('./gradients')
+    const functions = require('./functions')
+    
+    const jebcolors = {
+        colors,
+        gradients,
+        functions,
+    };
+
+    (window as any).jebcolors = jebcolors
+}

@@ -1,3 +1,4 @@
+import { contrastObject, color, numberFrom0To255, numberFrom0To1, gradient } from "../types";
 /**
  * "Normalizes" the given value to an rgb value, if the value is greater than 255, returns 255, if is less than 0, returns 0, if is in this range, returns the value (converted in int)
  * @param value The value to "normalize"
@@ -7,7 +8,7 @@
  * normalizeColorValue(34) // 34
  * normalizeColorValue(300) // 255
  */
-export declare const normalizeColorValue: (value: number) => number;
+export declare const normalizeColorValue: (value: number) => numberFrom0To255;
 /**
  * "Normalizes" the given value to an hsl value, if the value is greater than 1, returns 1, if is less than 0, returns 0, if is in this range, returns the value
  * @param value The value to "normalize"
@@ -17,7 +18,7 @@ export declare const normalizeColorValue: (value: number) => number;
  * normalizeHSLValue(0.56) // 0.56
  * normalizeHSLValue(2) // 1
  */
-export declare const normalizeHSLValue: (value: number) => number;
+export declare const normalizeHSLValue: (value: number) => numberFrom0To1;
 /**
  * Converts 3 given values of red, green and blue into an hexCode ("#a1b2c3")
  * @param red The red value of the returned hexCode
@@ -27,22 +28,7 @@ export declare const normalizeHSLValue: (value: number) => number;
  * @example
  * rgb(255,128,20) // "#ff8014"
  */
-export declare const rgb: (red: number, green: number, blue: number) => string;
-/**
- * Checks if the given hexCode is valid, must pass this tests:
- * 1. The hexValue starts with the "#" character
- * 2. The hexValue must be 4 or 7 characters long, for instance: "#123" or "#1a2b3c"
- * 3. All the characters (excluding the first "#") of the hexCode must be valid hexadecimal values [0-9a-fA-F]
- * @param hexCode The string to verify if is a valid hexCode
- * @returns If the given hexValue is valid
- * @example
- * isValidHexCode("ffffff") // false
- * isValidHexCode("#aabbccdd") // false
- * isValidHexCode("#ffhola") // false
- * isValidHexCode("#ff64bf") // true
- * isValidHexCode("#c00") // true
- */
-export declare const isValidHexCode: (hexCode: string) => boolean;
+export declare const rgb: (red: numberFrom0To255, green: numberFrom0To255, blue: numberFrom0To255) => color;
 /**
  * First checks if the given hexCode is valid, if true, then converts it to a fixed hexCode that:
  * 1. Is in lowercase
@@ -54,7 +40,7 @@ export declare const isValidHexCode: (hexCode: string) => boolean;
  * fixHexCode("anyInvalidHexCode") // error
  * fixHexCode("#F0F") // "#ff00ff"
  */
-export declare const fixHexCode: (hexCode: string) => string;
+export declare const fixHexCode: (hexCode: color) => color;
 /**
  * Converts the hexCode to a fixed one and then gets the value of the red in a range [0,255]
  * @param hexCode The hexCode to get the value of the red
@@ -63,7 +49,7 @@ export declare const fixHexCode: (hexCode: string) => string;
  * getRedValue("anyInvalidHexCode") // error
  * getRedValue("#aabbcc") // 170
  */
-export declare const getRedValue: (hexCode: string) => number;
+export declare const getRedValue: (hexCode: color) => numberFrom0To255;
 /**
  * Converts the hexCode to a fixed one and then gets the value of the green in a range [0,255]
  * @param hexCode The hexCode to get the value of the green
@@ -72,16 +58,24 @@ export declare const getRedValue: (hexCode: string) => number;
  * getGreenValue("anyInvalidHexCode") // error
  * getGreenValue("#aabbcc") // 187
  */
-export declare const getGreenValue: (hexCode: string) => number;
+export declare const getGreenValue: (hexCode: color) => numberFrom0To255;
 /**
  * Converts the hexCode to a fixed one and then gets the value of the blue in a range [0,255]
  * @param hexCode The hexCode to get the value of the blue
- * @returns The value of the blue in the given hexValue *
+ * @returns The value of the blue in the given hexValue
  * @example
  * getBlueValue("anyInvalidHexCode") // error
  * getBlueValue("#aabbcc") // 204
  */
-export declare const getBlueValue: (hexCode: string) => number;
+export declare const getBlueValue: (hexCode: color) => numberFrom0To255;
+/**
+ * Gets the red, green and blue values of a given hexCode
+ * @param hexCode The hexCode to get the values
+ * @returns An array of numbers in [red, green, blue]
+ * @example
+ * getRGB("#ff8014") // [255,128,20]
+ */
+export declare const getRGB: (hexCode: color) => numberFrom0To255[];
 /**
  * Converts an HSL color value to RGB. Conversion formula
  * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
@@ -94,7 +88,7 @@ export declare const getBlueValue: (hexCode: string) => number;
  * @example
  * hslToRgb(0.83, 0.5, 0.5) // [191, 64, 191]
  */
-export declare const hslToRgb: (hue: number, saturation: number, lightness: number) => number[];
+export declare const hslToRgb: (hue: numberFrom0To1, saturation: numberFrom0To1, lightness: numberFrom0To1) => numberFrom0To255[];
 /**
  * Converts an RGB color value to HSL. Conversion formula
  * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
@@ -107,7 +101,7 @@ export declare const hslToRgb: (hue: number, saturation: number, lightness: numb
  * @example
  * rgbToHsl(191, 64, 191) // [0.83, 0.5, 0.5]
  */
-export declare const rgbToHsl: (red: number, green: number, blue: number) => number[];
+export declare const rgbToHsl: (red: numberFrom0To255, green: numberFrom0To255, blue: numberFrom0To255) => numberFrom0To1[];
 /**
  * Converts 3 given values of hue, saturation and lightness into an hexCode ("#a1b2c3")
  * @param hue The hue value of the returned hexCode
@@ -117,7 +111,7 @@ export declare const rgbToHsl: (red: number, green: number, blue: number) => num
  * @example
  * hsl(0.83, 0.5, 0.5) // "#bf40bf"
  */
-export declare const hsl: (hue: number, saturation: number, lightness: number) => string;
+export declare const hsl: (hue: numberFrom0To1, saturation: numberFrom0To1, lightness: numberFrom0To1) => color;
 /**
  * Recieves an hexCode and returns an hexCode but with the color lighten in factor
  * - if factor < 1 then the returned color is darker
@@ -132,5 +126,52 @@ export declare const hsl: (hue: number, saturation: number, lightness: number) =
  * light("#780000", 1) // "#780000"
  * light("#780000", 1.5) // "#b40000"
  */
-export declare const light: (hexCode: string, factor: number) => string;
-//# sourceMappingURL=color-functions.d.ts.map
+export declare const light: (hexCode: color, factor: number) => color;
+/**
+ * Gets the relative luminance (is different that HSL lightness) of a color
+ * https://www.w3.org/TR/WCAG20/#relativeluminancedef
+ * @param hexCode The color as string
+ * @returns A number in range [0,1] with the relative luminance
+ * @example
+ * getRelativeLuminance('#000000') // 0
+ * getRelativeLuminance('#ffffff') // 1
+ * getRelativeLuminance('#198754') // 0.18174712291948017
+ */
+export declare const getRelativeLuminance: (hexCode: color) => numberFrom0To1;
+/**
+ * Calculates if a text of color hexCodeForeground over a background of color hexCodeBackground passes the tests
+ * of contrast according to W3C.
+ * https://www.w3.org/TR/WCAG20/#contrast-ratiodef
+ * https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast (normal text)
+ * https://www.w3.org/TR/WCAG20/#visual-audio-contrast7 (bold text)
+ * @param hexCodeBackground The color of the background as string
+ * @param hexCodeForeground The color of the text as string
+ * @returns An object that says what test the colors passed
+ * @example
+ * contrastTest('#198754', '#f8f9fa')
+ * // {
+ * //     minimumContrastWithNormalText: false,
+ * //     perfectContrastWithNormalText: false,
+ * //     minimumContrastWithBoldText: true,
+ * //     perfectContrastWithBoldText: false
+ * // }
+ *
+ */
+export declare const contrastTest: (hexCodeBackground: color, hexCodeForeground: color) => contrastObject;
+/**
+ * Checks the result of contrastTest with a white text and hexCode as background to check is the color is dark
+ * (if is dark, is recommended to put a light text)
+ * @param hexCode The color as string
+ * @returns A boolean valued true if the hexCode is a dark color
+ * @example
+ * isDarkColor('#198754') // true
+ */
+export declare const isDarkColor: (hexCode: color) => boolean;
+/**
+ * Gets the average color of the colors of a gradient
+ * @param hexCodes The hexCodes of the gradient (an array of strings)
+ * @returns A color in string format
+ * @example
+ * averageColor(['#12c2e9','#c471ed','#f64f59']) // #9980ba
+ */
+export declare const averageColor: (hexCodes: gradient) => color;

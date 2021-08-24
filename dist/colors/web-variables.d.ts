@@ -141,4 +141,3 @@ export declare const webMainColors: {
     lightGray: string;
     gainsboro: string;
 };
-//# sourceMappingURL=web-variables.d.ts.map

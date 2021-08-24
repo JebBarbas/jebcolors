@@ -19,6 +19,7 @@ const tan = "#e8c39e"
 const brown = "#8b4513"
 const black = "#000000"
 const lightGray = "#e9ecef"
+const cherry = "#990033"
 
 const midnightGreen = "#4e5851"
 const silver2 = "#ebebe3"
@@ -53,6 +54,7 @@ const clay = tan
 const chocolate = brown
 const elegant = black
 const silver = lightGray
+const sidra = cherry
 
 // Exports
 export const jebcMainColors = {
@@ -73,6 +75,7 @@ export const jebcMainColors = {
     chocolate,
     elegant,
     silver,
+    sidra,
 }
 
 export const jebcUnusedColors = {
