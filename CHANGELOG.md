@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.5.0](https://github.com/JebBarbas/jebcolors/compare/v2.4.0...v2.5.0) (2021-08-24)
+
+
+### Features
+
+* Added new functions and now bundle is available 🚗 ([8130b8d](https://github.com/JebBarbas/jebcolors/commit/8130b8d02e91ed40a18502d2abb7ae229906fc70))
+
 ## [2.4.0](https://github.com/JebBarbas/jebcolors/compare/v2.3.0...v2.4.0) (2021-08-17)
 
 
