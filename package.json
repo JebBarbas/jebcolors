@@ -1,6 +1,6 @@
 {
   "name": "jebcolors",
-  "version": "2.5.0",
+  "version": "3.0.0",
   "description": "npm module that contains colors, gradients and a class used to modify the colors or gradients",
   "main": "dist/index.js",
   "scripts": {

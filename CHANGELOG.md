@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/JebBarbas/jebcolors/compare/v2.5.0...v3.0.0) (2021-09-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* Added supercolors and supergradients, removed functions ⚡
+
+### Features
+
+* Added supercolors and supergradients, removed functions ⚡ ([df0131a](https://github.com/JebBarbas/jebcolors/commit/df0131a972bc794bea8c8eb44366134995ba6c89))
+
 ## [2.5.0](https://github.com/JebBarbas/jebcolors/compare/v2.4.0...v2.5.0) (2021-08-24)
 
 
