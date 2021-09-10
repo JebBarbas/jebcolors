@@ -1,7 +1,7 @@
 "use strict";
 // In this module I save the social color variables (credits to react-native-elements)
 // src = https://github.com/react-native-elements/react-native-elements/blob/next/src/SocialIcon/SocialIcon.tsx (line:17)
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.socialMainColors = void 0;
 // Color and final variables
 var githubAlt = '#000000';
@@ -73,6 +73,6 @@ exports.socialMainColors = {
     whatsapp: whatsapp,
     wordpress: wordpress,
     youtube: youtube,
-    microsoft: microsoft
+    microsoft: microsoft,
 };
 //# sourceMappingURL=social-variables.js.map

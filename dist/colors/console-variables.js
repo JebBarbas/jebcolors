@@ -1,7 +1,7 @@
 "use strict";
 // In this module I save the colors from 0-f of the console colors
 // src = https://en.wikipedia.org/wiki/Web_colors
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.consoleMainColors = void 0;
 // Final color variables
 var white = "#ffffff";
@@ -37,6 +37,6 @@ exports.consoleMainColors = {
     blue: blue,
     navy: navy,
     fuchsia: fuchsia,
-    purple: purple
+    purple: purple,
 };
 //# sourceMappingURL=console-variables.js.map

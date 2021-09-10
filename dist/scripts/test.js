@@ -1,4 +1,6 @@
 "use strict";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/ban-types */
 // Testing module
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -19,17 +21,21 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 // First, import all the thing to work correctly
 var assert_1 = require("assert");
-var functions_1 = require("../functions");
 var logs_1 = require("../functions/logs");
+var classes_1 = require("../classes");
 // Import the colors
 var colors = __importStar(require("../colors"));
 var gradients = __importStar(require("../gradients"));
-var functions = __importStar(require("../functions"));
 // Function to maintain the code cleaner
 var entries = function (object) { return Object.entries(object); };
+// Function to exclude keys that I don't want to test
+var isBadKey = function (key) {
+    var badKeys = ['__esModule', 'default'];
+    return badKeys.includes(key);
+};
 // TEST COLORS
 var testColors = function () {
     // For saving total colors and total errors
@@ -40,8 +46,7 @@ var testColors = function () {
     logs_1.enter();
     entries(colors).forEach(function (entry) {
         var colorGroupKey = entry[0], colorGroup = entry[1];
-        // If the gradientGroup its __esModule (a boolean), enters here
-        if (typeof colorGroup === 'boolean') {
+        if (isBadKey(colorGroupKey)) {
             return;
         }
         logs_1.info("Testing " + colorGroupKey + " ...");
@@ -51,7 +56,7 @@ var testColors = function () {
             var colorKey = entry[0], color = entry[1];
             localTotalColors++;
             globalTotalColors++;
-            if (!functions_1.isValid(color, 'hexCode')) {
+            if (!classes_1.Color.test(color).valid) {
                 logs_1.error("Found error in color " + colorKey);
                 localTotalBadColors++;
                 globalTotalBadColors++;
@@ -87,8 +92,7 @@ var testGradients = function () {
     logs_1.enter();
     entries(gradients).forEach(function (entry) {
         var gradientGroupKey = entry[0], gradientGroup = entry[1];
-        // If the gradientGroup its __esModule (a boolean), enters here
-        if (typeof gradientGroup === 'boolean') {
+        if (isBadKey(gradientGroupKey)) {
             return;
         }
         logs_1.info("Testing " + gradientGroupKey + " ...");
@@ -100,7 +104,7 @@ var testGradients = function () {
             globalTotalGradients++;
             var errorExists = false;
             gradient.forEach(function (color) {
-                if (!functions_1.isValid(color, 'hexCode')) {
+                if (!classes_1.Color.test(color).valid) {
                     logs_1.error("Found error in gradient " + gradientKey + " in color " + color);
                     if (!errorExists) {
                         errorExists = true;
@@ -130,62 +134,24 @@ var testGradients = function () {
     }
 };
 // TEST FUNCTIONS
-// As every function is different, you'll need to execute all of them, if some function returns an error, then the 
-// catch block will return false, otherwise return true at the end
-var testFunctions = function () {
+var testClasses = function () {
     try {
         logs_1.enter();
-        logs_1.info('Starting Functions Tests ...');
+        logs_1.info('Testing Color and Gradient (random and seed)');
+        logs_1.success('Random color:', classes_1.Color.random().code);
+        logs_1.success('Seeded color:', classes_1.Color.seed('jebcolors').code);
+        logs_1.success('Random gradient:', classes_1.Gradient.random().codes);
+        logs_1.success('Seeded gradient:', classes_1.Gradient.seed('jebcolors').codes);
         logs_1.enter();
-        // Some functions apply others in ladder, so use it to test a lot of functions at once
-        /*
-            light
-                getRGB (getRedValue, getGreenValue, getBlue)
-                    fixHexCode
-                        isValid
-                        clean
-        */
-        logs_1.info('Testing: light, getRedValue, getGreenValue, getBlueValue, fixHexCode, isValidHexCode, clean ...');
-        logs_1.success(functions.light("#cc0000", 1.2));
-        logs_1.enter();
-        /*
-            deg
-            hsl
-                normalizeHSLValue
-                    normalize
-                hslToRgb
-                rgb
-                    normalizeColorValue
-        */
-        logs_1.info('Testing deg, hsl, normalizeHSLValue, normalize, hslToRgb, rgb, normalizeColorValue ...');
-        logs_1.success(functions.hsl(functions.deg(180), 1, 0.5));
-        logs_1.enter();
-        /*
-            isDarkColor
-                contrastText
-                    getRelativeLuminance
-        */
-        logs_1.info('Testing isDarkColor, contrastText, getRelativeLuminance ...');
-        logs_1.success(functions.isDarkColor("#cc0000").toString());
-        logs_1.enter();
-        /*
-            percentage
-        */
-        logs_1.info('Testing percentage ...');
-        logs_1.success(functions.percentage(100).toString());
-        logs_1.enter();
-        /*
-            rgbToHsl
-        */
-        logs_1.info('Testing rgbToHsl ...');
-        logs_1.success(functions.rgbToHsl(255, 255, 255).toString());
-        logs_1.enter();
-        logs_1.success('All functions passed the test');
+        logs_1.info('Tesing supercolor and supergradient with css colors');
+        logs_1.success(classes_1.supercolor('darkred').code);
+        logs_1.success(classes_1.supergradient(['red', 'orange', 'yellow']).codes);
         return true;
     }
-    catch (_a) {
+    catch (err) {
+        logs_1.error('Error testing classes', err);
         return false;
     }
 };
-assert_1.ok(testColors() && testGradients() && testFunctions());
+assert_1.ok(testColors() && testGradients() && testClasses());
 //# sourceMappingURL=test.js.map

@@ -1,6 +1,6 @@
 "use strict";
 // This only runs when you run watchcolors, and only displays a message that says that the server is running
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 // Imports
 var logs_1 = require("../functions/logs");
 // Main

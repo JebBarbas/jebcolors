@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jebcolors npm module</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <noscript>You need to enable javascript to see the colors</noscript>
+    <div id="app">
+        <div>
+            <h1>Welcome to jebcolors main page</h1>
+            <p>
+                Here you can see an example of all the colors and gradients. And also you can see an example
+                of a random/seed color/gradient and how the megacolors create gradients.
+            </p>
+            <ul>
+                <li><a href="#colors">See Colors</a></li>
+                <li><a href="#gradients">See Gradients</a></li>
+                <li><a href="#randoms">See Random and Seeded Colors/Gradients</a></li>
+                <li><a href="#supercolors">See colors of a supercolor</a></li>
+                <li><a href="#megacolors">See the Gradients of a Megacolor</a></li>
+                <li><a href="#console">Use a mini-console</a></li>
+            </ul>
+        </div>
+        
+        <div id="colors">
+            <h1>All Colors</h1>
+        </div>
+        <div id="gradients">
+            <h1>All Gradients</h1>
+        </div>
+        <div id="randoms">        
+            <div class="flex">
+                <h1>Random And Seeded Colors And Gradients</h1>
+                <div class="flex">
+                    <label for="txtSeed">Seed:&nbsp;</label>
+                    <input type="text" id="txtSeed">
+                </div>
+                <button id="btnRandom">Random</button>
+            </div>
+            <div class="grid">
+                <div class="box" id="randomColor">
+                    <span>Random Color</span>
+                    <span class="white">Random Color</span>
+                </div>
+        
+                <div class="box" id="randomGradient">
+                    <span>Random Gradient</span>
+                    <span class="white">Random Gradient</span>
+                </div>
+
+                <div class="box" id="seededColor">
+                    <span>Seeded Color</span>
+                    <span class="white">Seeded Color</span>
+                </div>
+        
+                <div class="box" id="seededGradient">
+                    <span>Seeded Gradient</span>
+                    <span class="white">Seeded Gradient</span>
+                </div>
+            </div>
+        </div>
+        <div id="supercolors">
+            <div class="flex">
+                <h1>Functions of a supercolor (only the ones that return a supercolor): </h1>
+                <div class="flex">
+                    <label for="txtColorOrCodeSuper">Color or Code:&nbsp;</label>
+                    <input type="text" id="txtColorOrCodeSuper" value="red">
+                </div>
+            </div>
+            <div class="grid">
+                <div class="box" id="sColor">
+                    <span>Color</span>
+                    <span class="white">Color</span>
+                </div>
+
+                <div class="box" id="sAlpha">
+                    <span>50% Transparent</span>
+                    <span class="white">50% Transparent</span>
+                </div>
+
+                <div class="box" id="sSatPlus">
+                    <span>Saturated 1.5</span>
+                    <span class="white">Saturated 1.5</span>
+                </div>
+
+                <div class="box" id="sSatMinus">
+                    <span>Desaturated 1.5</span>
+                    <span class="white">Desaturated 1.5</span>
+                </div>
+
+                <div class="box" id="sLigPlus">
+                    <span>Lighten 1.5 (also disabled)</span>
+                    <span class="white">Lighten 1.5 (also disabled)</span>
+                </div>
+
+                <div class="box" id="sLigMinus">
+                    <span>Darken 1.5 (also hover)</span>
+                    <span class="white">Darken 1.5 (also hover)</span>
+                </div>
+
+                <div class="box" id="sRot">
+                    <span>Rotated 90 degrees (half complementary)</span>
+                    <span class="white">Rotated 90 degrees (half complementary)</span>
+                </div>
+
+                <div class="box" id="sCompl">
+                    <span>Complementary</span>
+                    <span class="white">Complementary</span>
+                </div>
+
+                <div class="box" id="sNext">
+                    <span>Next (rotated 30)</span>
+                    <span class="white">Next (rotated 30)</span>
+                </div>
+
+                <div class="box" id="sPrev">
+                    <span>Previous (rotated -30)</span>
+                    <span class="white">Previous (rotated -30)</span>
+                </div>
+
+                <div class="box" id="sNegative">
+                    <span>Negative</span>
+                    <span class="white">Negative</span>
+                </div>
+
+                <div class="box" id="sGray">
+                    <span>Grayscale</span>
+                    <span class="white">Grayscale</span>
+                </div>
+            </div>
+        </div>
+        <div id="megacolors">
+            <div class="flex">
+                <h1>Gradients of a megacolor:</h1>
+                <div class="flex">
+                    <label for="txtColorOrCode">Color or Code:&nbsp;</label>
+                    <input type="text" id="txtColorOrCode" value="red">
+                </div>
+            </div>
+            <div class="grid">
+                <div class="box" id="gColor">
+                    <span>Pure Color</span>
+                    <span class="white">Pure Color</span>
+                </div>
+
+                <div class="box" id="gAnalogous">
+                    <span>Analogous</span>
+                    <span class="white">Analogous</span>
+                </div>
+
+                <div class="box" id="gComplementary">
+                    <span>Complementary</span>
+                    <span class="white">Complementary</span>
+                </div>
+
+                <div class="box" id="gDarker">
+                    <span>Darker</span>
+                    <span class="white">Darker</span>
+                </div>
+
+                <div class="box" id="gLighter">
+                    <span>Lighter</span>
+                    <span class="white">Lighter</span>
+                </div>
+
+                <div class="box" id="gMonocromatic">
+                    <span>Monocromatic</span>
+                    <span class="white">Monocromatic</span>
+                </div>
+
+                <div class="box" id="gNegative">
+                    <span>Negative</span>
+                    <span class="white">Negative</span>
+                </div>
+
+                <div class="box" id="gSplit">
+                    <span>Split Complementary</span>
+                    <span class="white">Split Complementary</span>
+                </div>
+
+                <div class="box" id="gTriadic">
+                    <span>Triadic</span>
+                    <span class="white">Triadic</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="console">
+        <div class="flex">
+            <h1>Console (test a script and see the result)</h1>
+            <p>
+                You can access to: Color, Gradient, supercolor, megacolor, supergradient, upgradecolor, colors and
+                gradients only calling them.
+            </p>
+        </div>
+        <div class="grid">
+            <textarea id="consoleConsole">Color.random()</textarea>
+            <div id="result" style="overflow: scroll;"></div>
+        </div>
+        <div style="display: grid;">
+            <button id="btnRun">Run</button>
+        </div>
+    </div>
+    <div id="colorModalBack" class="d-none">
+        <div id="colorModal">
+            <div id="colorModalHead">
+                <button id="colorModalClose">&times;</button>
+            </div>
+            <div id="colorModalContent">
+                <h3 id="colorModalTitle"></h3>
+                <h5 id="colorModalColor"></h5>
+                <p id="colorModalText">Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./bundle.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

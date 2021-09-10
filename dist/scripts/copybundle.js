@@ -1,11 +1,11 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var fs_1 = require("fs");
 var logs_1 = require("../functions/logs");
 try {
-    logs_1.info('Copying "bundle.js" from dist to test ...');
+    logs_1.info('Copying "bundle.js" from dist to docs ...');
     var text = fs_1.readFileSync('./dist/bundle.js');
-    fs_1.writeFileSync('./test/bundle.js', text);
+    fs_1.writeFileSync('./docs/bundle.js', text);
     logs_1.success('"bundle.js" Copied');
 }
 catch (err) {

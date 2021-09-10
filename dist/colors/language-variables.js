@@ -1,6 +1,6 @@
 "use strict";
 // In this module I the colors of some languages
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.languageMainColors = void 0;
 // Color and Final variables
 var cBlue = "#3949aa";
@@ -56,6 +56,6 @@ exports.languageMainColors = {
     vueGreen: vueGreen,
     angularRed: angularRed,
     azureBlue: azureBlue,
-    svelteOrange: svelteOrange
+    svelteOrange: svelteOrange,
 };
 //# sourceMappingURL=language-variables.js.map

@@ -1,7 +1,7 @@
 "use strict";
 // In this module I save the bootstrap variables to a better manage
 // src = https://getbootstrap.com/docs/5.0/utilities/colors/
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.bootstrapGrayColors = exports.bootstrapUnusedColors = exports.bootstrapMainColors = void 0;
 // Color variables
 var blue = "#0d6efd";
@@ -44,7 +44,7 @@ exports.bootstrapMainColors = {
     warning: warning,
     danger: danger,
     light: light,
-    dark: dark
+    dark: dark,
 };
 exports.bootstrapUnusedColors = {
     indigo: indigo,
@@ -53,7 +53,7 @@ exports.bootstrapUnusedColors = {
     orange: orange,
     teal: teal,
     white: white,
-    black: black
+    black: black,
 };
 exports.bootstrapGrayColors = {
     gray100: gray100,
@@ -64,6 +64,6 @@ exports.bootstrapGrayColors = {
     gray600: gray600,
     gray700: gray700,
     gray800: gray800,
-    gray900: gray900
+    gray900: gray900,
 };
 //# sourceMappingURL=bootstrap-variables.js.map

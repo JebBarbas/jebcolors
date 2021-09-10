@@ -38,11 +38,11 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var node_fetch_1 = __importDefault(require("node-fetch"));
 var fs_1 = require("fs");
 var path_1 = require("path");
-var functions_1 = require("../functions");
+var classes_1 = require("../classes");
 var helpscript_1 = require("helpscript");
 // Consts
 var fetchLink = "https://raw.githubusercontent.com/ghosh/uiGradients/master/gradients.json";
@@ -58,7 +58,7 @@ var main = function () { return __awaiter(void 0, void 0, void 0, function () {
     var result, json, fileText, colorNames;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, node_fetch_1["default"](fetchLink)];
+            case 0: return [4 /*yield*/, node_fetch_1.default(fetchLink)];
             case 1:
                 result = _a.sent();
                 return [4 /*yield*/, result.json()];
@@ -69,7 +69,7 @@ var main = function () { return __awaiter(void 0, void 0, void 0, function () {
                 json.forEach(function (gradient) {
                     var validGradient = true;
                     gradient.colors.forEach(function (color) {
-                        if (!functions_1.isValid(color, 'hexCode')) {
+                        if (!classes_1.Color.test(color).valid) {
                             validGradient = false;
                         }
                     });

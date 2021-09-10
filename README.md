@@ -1,84 +1,158 @@
 # JebColors
 jebcolors is a module that provides a lot of colors, like the bootstrap colors, the web colors or a lot of colors 
 that I personally wrote, like my own colors, social media colors and some languages colors. It also provides 
-gradients from grabient, instagram and uigradients. And functions to use with the colors, like `rgb()` or `light()`. 
+gradients from grabient, instagram and uigradients.
+
 This module was originally written by me to use it with react-native, but you can use it with a lot of another node
 modules like react. You can also use the "bundle.js" file and use it in the browser in `window.jebcolors` (contains 
-colors, gradients and functions).
+colors, gradients and classes).
 
 ---
 
-[![Build Status](https://app.travis-ci.com/JebBarbas/jebcolors.svg?branch=main)](https://app.travis-ci.com/JebBarbas/jebcolors)
-[![dependencies Status](https://status.david-dm.org/gh/jebbarbas/jebcolors.svg)](https://david-dm.org/jebbarbas/jebcolors)
-![npm](https://img.shields.io/npm/v/jebcolors)
+![Travis (.com)](https://img.shields.io/travis/com/jebbarbas/jebcolors)
+![David](https://img.shields.io/david/jebbarbas/jebcolors)
 ![npm](https://img.shields.io/npm/dt/jebcolors)
+![NPM](https://img.shields.io/npm/l/jebcolors)
+![npm](https://img.shields.io/npm/v/jebcolors)
 ![GitHub top language](https://img.shields.io/github/languages/top/jebbarbas/jebcolors)
-![GitHub Repo stars](https://img.shields.io/github/stars/jebbarbas/jebcolors?style=social)
 
-## Installation - Node
+## News - PLEASE READ
+- In version 3.0.0, the functions are removed and remplaced with the Color and Gradient classes that 
+contains this functions either in static or as an instance, so, if you are using functions like
+`fixHexCode()`, `getRedValue()` or `isDark()` in your code, either don't update `jebcolors` or replace with
+their equivalent (see "Functions Equivalents in Supercolors" below).
+- You can see the colors working [here](https://jebbarbas.github.io/jebcolors).
+
+## Installation & Use - Node
+To install just run in your console:
 ```
 npm i jebcolors
 ```
 
-## Instalation - Browser
-You can use the [jsDelivr](https://cdn.jsdelivr.net/npm/jebcolors@2.5.0/dist/bundle.js) cdn to import the bundle.
-```html
-<script src="https://cdn.jsdelivr.net/npm/jebcolors@2.5.0/dist/bundle.js"></script>
-```
-Now jebcolors is available in `window.jebcolors`.
+Now you can import the module either using ES2015 `import` or commonJS `require`. (In this and bellow examples
+I'm going to use ES2015 syntax).
 
-## Quick Start - Import Colors
-You can import the module either using `import` or `require`.
-```javascript
-import { jebcMainColors, uiMainGradients, rgb } from 'jebcolors'
+```js
+import { jebcMainColors, uiMainGradients, supercolor } from 'jebcolors'
 // OR
-const { jebcMainColors, uiMainGradients, rgb } = require('jebcolors')
+const { jebcMainColors, uiMainGradients, supercolor } = require('jebcolors')
 ```
 
-## Quick Start - Usage in Node
-To use this module you only import the group of colors that you prefer (see "ColorGroups") and select the color you want. In this example I'm going to use the `light` color of bootstrap and the `magic` color of jebc, and I'm going to use them in an example of a react-native Stylesheet.
+Here is a little example of how to usege in a `.jsx` file for `react-native`:
+
 ```jsx
 import React from "react"
-import { StyleSheet, Text, View } from "react-native"
+import { Text, View } from "react-native"
 import { bootstrapMainColors, jebcMainColors } from 'jebcolors'
 
+const Background = ({hexcode}) => {
+    const {code, text} = supercolor(hexcode)
+
+    return (
+        <View 
+            style={{
+                flex: 1,
+                padding: 24,
+                backgroundColor: code
+            }}
+        >
+            <Text 
+                style={{
+                    color: text,
+                    textAlign: "center",
+                    fontSize: 30,
+                    fontWeight: "bold"
+                }}
+            >
+                Background: {code}; Text: {text}
+            </Text>
+        </View>
+    )
+}
+
 const App = () => (
-    <View style={styles.container}>
-        <Text style={styles.text}>Using jebcolors</Text>
+    <View>
+        <Background hexcode={jebcMainColors.magic}/>
+        <Background hexcode={jebcMainColors.blood}/>
+        <Background hexcode={bootstrapMainColors.primary}/>
+        <Background hexcode={bootstrapMainColors.success}/>
+        <Background hexcode="hotpink"/>
     </View>
 )
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        padding: 24,
-        backgroundColor: jebcMainColors.magic
-    },
-    title: {
-        color: bootstrapMainColors.light,
-        textAlign: "center",
-        fontSize: 30,
-        fontWeight: "bold"
-    }
-})
 
 export default App;
 ```
 
-## Quick Start - Usage in Browser
-Once the `<script>` tag is put, jebcolors is available in `window.jebcolors`, and inside are the colors, gradients 
-and functions.
+And here is another example, but here I used a `react-native-paper` component:
+
+```jsx
+import { bootstrapMainColors } from 'jebcolors'
+import Profile from './Profile' // Imaginary component where we show a profile
+import { useProfile } from './hooks/useProfile' // Imaginary hook to get functions that affect the profile
+import { View } from 'react-native'
+import { Button } from 'react-native-paper'
+
+const App = () => {
+    const {
+        editProfile,
+        deleteProfile,
+        sendFriendRequest,
+    } = useProfile() // Imaginary functions that affect the profile
+
+    const { danger, warning, success } = bootstrapMainColors
+
+    return (
+        <View>
+            <Profile />
+            <Button icon="account-edit" type="contained" color={warning} onPress={editProfile}>Edit</Button>
+            <Button icon="account-remove" type="contained" color={danger} onPress={deleteProfile}>Delete</Button>
+
+            <Button 
+                icon="account-plus" 
+                type="contained" 
+                color={success} 
+                onPress={sendFriendRequest}
+            >
+                Send Friend Request
+            </Button>
+        </View>
+    )
+}
+
+export default App
+```
+
+## Instalation & Use - Browser
+You can use the [jsDelivr](https://cdn.jsdelivr.net/npm/jebcolors@3.0.0/dist/bundle.js) cdn to import the bundle.
+```html
+<script src="https://cdn.jsdelivr.net/npm/jebcolors@3.0.0/dist/bundle.js"></script>
+```
+Now jebcolors is available in `window.jebcolors` (or only `jebcolors`, because `window` is global).
+
+- To access to the colors use `jebcolors.colors`. Ex: `jebcolors.colors.bootstrapMainColors.primary`
+- To access to the gradients use `jebcolors.gradients`. Ex: `jebcolors.gradients.uiMainGradients.jShine`
+- To access to the classes like `Gradient`, `Color` or the superx functions use `jebcolors.superclasses`.
+Ex: `jebcolors.superclasses.Color.rgb([100,80,0])`, `jebcolors.superclasses.supercolor("#ff8000")`.
+
+Here is a little example of usage in a part of an HTML file:
+
 ```html
 <script src="path/to/jebcolors/bundle.js"></script>
 <script>
-    const { colors, functions } = jebcolors
+    const { colors, superclasses } = jebcolors
     const divElement = document.querySelector('#divElement')
+    const anotherDiv = document.querySelector('#anotherDiv')
 
-    const mainColor = colors.bootstrapMainColors.primary
-    const {white, black} = colors.bootstrapUnusedColors
+    const superPrimary = superclasses.supercolor(colors.bootstrapMainColors.primary)
 
-    divElement.style.background = mainColor
-    divElement.style.color = functions.isDarkColor(mainColor) ? white : black
+    divElement.style.background = superPrimary.code
+    divElement.style.color = superPrimary.text
+
+    const linearGradient = (stringArray) => `linear-gradient(135deg, ${colorArray.join()})`
+    const megaPrimary = superclasses.upgradecolor(superPrimary)
+
+    anotherDiv.style.background = linearGradient(megaPrimary.gradientWithAnalogous.codes)
+    anotherDiv.style.color = megaPrimary.averageColor.text
 </script>
 ```
 
@@ -103,6 +177,7 @@ There are 401 gradients in 3 Gradient Groups.
 - instagramMainGradients (Instagram gradients, like "instagram", "red", and "green") (6 gradients)
 
 In this example I'm going to apply two different gradients (one from grabient and one from uigradients) to 2 different LinearGradient components imported from `expo-linear-gradient`.
+
 ```jsx
 import React from 'react'
 import { Text, View } from 'react-native'
@@ -123,62 +198,188 @@ const App = () => (
 export default App
 ```
 
-## Functions
-In version 2.0.0+ you can use also some color-relationated functions.
-In this example, I'g going to show the rgb, hsl and light functions.
-```javascript
-import {rgb, hsl, light} from 'jebcolors'
+## Supercolors
+In version 3.0.0+ the functions are deleted and now the Color class is introduced, is based in the module `colors` 
+but contains more features like: support css colors, directly provide the best color for a text when the supercolor
+is the background color.
 
-const primaryColor = rgb(100, 200, 250)
-const secondaryColor = hsl(1,0.5,0.5)
-const theme = {
-    primary: primaryColor,
-    secondary: secondaryColor,
-    hover: light(primaryColor, 0.8),
-    disabled: light(secondaryColor, 1.2)
-}
+To make a color a supercolor, just use the `supercolor()` function or create one from the Class `Color`.
+
+```js
+import { Color, supercolor, bootstrapMainColors } from 'jebcolors'
+
+const redFromCSS = supercolor('red')
+const redFromCode = supercolor('#ff0000')
+const randomColor = Color.random()
+const randomColorFromSeed = Color.seed('jebcolors')
+const greenFromRGB = Color.rgb([0,255,0])
+const greenFromHSL = Color.hsl([120,100,50])
+
+const superPrimary = supercolor(bootstrapMainColors.primary)
+
+// Now you can use functions in a supercolor
+const darkerRed = redFromCSS.darken(1.2)
+const lighterRed = redFromCode.lighten(1.2)
+const halfTransparentRandomColor = randomColor.alpha(50)
+const colorTextFromGreenBackground = greenFromRGB.text
+
+const hoverPrimary = superPrimary.darken(1.2)
+
+// If you want to get again the code (string like #aabbcc) from the supercolor, just use code
+const cssGoldHexcode = supercolor('gold').code
+const randomHexCode = Color.random().code
+const againRedButHexCode = redFromCode.code
+
+const primary = superPrimary.code
 ```
 
-## Scripts (collaborators-zone)
-### npm test
-If you write colors and you want to see if there are errors or/and you want to see how many colors there are, you can run in you console `npm test`, if there are any error with a color, you will be able to see in what color and what's the error. If there are not errors, you'll can see a message saying "All ## colors in module passed the test" where ## is the number of colors.
+## Megacolors
+The supercolors have the basic functions of the colors, but, if you want to create a supergradient (see
+supergradients below) you'll need to make your supercolor a megacolor. These are the ways to make a
+megacolor:
 
-### npm run generatejson
-If you want to generate a JSON with all the colors and another one with all the gradients, you can run `npm run generatejson`. 
-It will run the test script and then generate the JSON files in './test/colors.json' and './test/gradients.json'.
+- Create the megacolor from the beggining
+```js
+import {megacolor, jebcMainColors} from 'jebcolors'
 
-### npm run watchcolors
-If you want to test that all the colors pass the test, and you want to see how the colors look, you can run `npm run watchcolors`, this will test the colors, generate the json, and create a server in the folder `test`.
+const megaMagic = megacolor(jebcMainColors.magic)
+```
+- Create the megacolor using the code of a supercolor
+```js
+import {megacolor, supercolor, jebcMainColors} from 'jebcolors'
+const superMagic = supercolor(jebcMainColors.magic)
+const megaMagic = megacolor(superMagic.code)
+```
+- Use `upgradecolor()` with a supercolor
+```js
+import {supercolor, upgradecolor, jebcMainColors} from 'jebcolors'
 
-For each color you will see an `<h1>` with the name, an `<h3>` with the number of colors and a `<div>` with the color of background, and white and black text with the name of the color (you can see which text looks better with the background).
+const superMagic = supercolor(jebcMainColors.magic)
+const megaMagic = upgradecolor(superMagic)
+```
 
-In version 2.3.0+, it also works with gradients, makes the same as colors, but the background is a linear-gradient with the colors.
+Once you have a megacolor youu can access to the gradients with the properties `gradientWithXXX`.
+```js
+const magicAndComplementary = megaMagic.gradientWithComplementary
+```
 
-### npm run getgradients
-The gradients from uiGradients are stored in a file in './gradients/uigradients-variables', but this colors are from the [official uiGradients repository](https://raw.githubusercontent.com/ghosh/uiGradients/master/gradients.json), to avoid using async functions when you use this module, the gradients are fetched in dev-time running `npm run getgradients`, this script fetches all the gradients and saves the result in a file that is going to be compiled and where are going to be the gradients.
+## Supergradients
+In versions 3.0.0+ there are also supergradients, that are array of supercolors that represents a gradient
+To make one, just use the `supergradient()` function (you can pass as an array of codes or an array of supercolors), use the `Gradient` class, or use a megacolor.
 
-### npm run build
-Is used to compile all the TypeScript files.
+```js
+import {Gradient, supergradient, supercolor, megacolor, uiMainGradients} from 'jebcolors'
 
-## npm run pack
-Is used to webpack the files.
+const red = supercolor('#ff0000')
+const magenta = supercolor('#ff00ff')
 
-## npm run copybundle
-Is used to copy the "bundle.js" file from dist to test.
+const superEdges = supergradient(red, magenta)
+const superRainbow = supergradient('#ff0000','#ff8000','#ffff00','#00ff00','#00ffff','#0000ff','#ff00ff')
+const superRandom = Gradient.random()
+const superSeed = Gradient.seed('jebcolors')
+const superRed = megacolor('red').gradientWithAnalogous
+```
 
-### npm run buildall
-- First, compiles all the files (this is to update the getfiles.ts files)
-- Then, fetches the gradients (with the compiled file getfiles.js) and creates "uigradients-variables.ts" in src.
-- Compiles all the TypeScript again in the project (principally, the new generated "uigradients-variables.ts" file).
-- Generates the json and creates "colors.json" & "gradients.json" in test.
-- Webpacks the files and saves in dist.
-- And finally copies the bundle from dist to test.
+Now you can use the functions of the gradients
 
-### npm run release
-Changes the package.json in base of the last git commit (see standard-version).
+```js
+const arrayColors = superEdges.codes // An array of strings
+const negativeOfFirst = superEdges.colors[0].negative
 
-### npm run share
-Pushes the git repository and publishes the package to npm.
+const textColorForGradient = superEdges.averageColor.text
+```
 
-### npm run history
-Shows in console a git log.
+## Functions Equivalents in Supercolors
+In 3.0.0+ the functions are removed and now are replaced by the Color class. Here are some functions and
+their correct replacement in the new version:
+
+- `normalize(value)`, `clean(value)`, `percentage(value)`, `deg(value)`: 
+Install module `helpscript` and use their functions.
+- `normalizeColorValue(value)`: (Normalize a number to the range [0,255]) Use helpscript `normalize(value,0,255)`.
+- `normalizeHSLValue(value)`: (Normalize a number to the range [0,255]) Use helpscript `normalize(value,0,1)`.
+
+The next methods normally return a `supercolor`, but once this supercolor is created you can access to its
+properties like `code` or `hsl`, `rgb`.
+
+- `rgb(red, green, blue)`: (Get hex code from rgb) Use `Color.rgb([red,green,blue]).code`.
+- `hsl(hue, saturation, lightness)`: (Get hex code from hsl) Use `Color.hsl([hue, saturation, lightness]).code`
+- `hslToRgb(hue, saturation, lightness)`: (Convert hsl to rgb) 
+Use `Color.hsl([hue, saturation, lightness]).rgb`.
+- `rgbToHsl(red, green, blue)`: (Convert rgb to hsl)
+Use `Color.rgb([red, green, blue]).hsl`.
+
+To make the contrast test, now you need 2 `supercolors`:
+
+```js
+const hex1 = "#000000"
+const hex2 = "#ffffff"
+
+// Before
+constrastTest(hex1, hex2) // Returned
+/*
+ *  {
+ *      minimumContrastWithNormalText,
+ *      perfectContrastWithNormalText,
+ *      minimumContrastWithBoldText,
+ *      perfectContrastWithBoldText
+ *  }
+*/
+
+// Now
+Color.contrast(supercolor(hex1), supercolor(hex2)) // Returns
+/*
+ * {
+ *      passes: {
+ *          normal: {
+ *              minimal,
+ *              perfect
+ *          },
+ *          bold: {
+ *              minimal,
+ *              perfect
+ *          }
+ *      }
+ * }
+*/
+```
+
+For the next functions you'll need to make a `supercolor`.
+
+```js
+const newColor = supercolor('#aabbcc')
+```
+
+- `fixHexCode(code)`: (Get a 7 digits long hexcode or throw error) Use `newColor.code`.
+- `getRedValue(code)`, `getGreenValue(code)` and `getBlueValue(code)`: (Get the red, green or blue value of the color)
+Use `newColor.red`, `newColor.green` and `newColor.blue`.
+- `getRGB(code)`: (Get an array [red, green, blue] of a color) Use `newColor.rgb` (there is also a property if you
+want to get the hsl, use `newColor.hsl`).
+- `light(code, factor)`: (Make a color ligther or darker) Use `newColor.lighten(factor).code`, 
+`newColor.darken(factor).code` (this equals to `newColor.lighten(-factor).code`), 
+or if you want predefined lighten and darken colors, use `newColor.disabled.code` (lighter) or `newColor.hover.code`
+(darker).
+- `getRelativeLuminance(code)`: (Get the color luminance) Use `newColor.luminance`.
+- `isDarkColor(code)`: (true of false depending if the color is dark or not) Use `newColor.isDark` or 
+`newColor.isLight` (this maybe will return something different from the last version, because in this new version this
+functions uses YIQ color model to check this and stores the "YIQ CONSTANT" in `newColor.jeb`, intead of use the
+luminance and contrast test used in the last version). Alternatively, if you used this function to check if to your
+background is better use white or black to the color text, you can use `newColor.text`, see this example:
+
+```js
+const backgroundColor = '#ff69bf'
+background.style.background = backgroundColor
+
+// Before
+background.style.color = isDarkColor(backgroundColor) ? 'white' : 'black'
+
+// Now
+background.style.color = supercolor(backgroundColor).text
+```
+
+The last function is averageColor, used to get the middle color of a gradient, now you'll use the
+Gradient class. The `averageColor` is a `supercolor`, so you can get any property of this type, like:
+`code`, `isDark`, `text`, etc.
+
+```js
+supergradient(uiMainGradients.jShine).averageColor
+```

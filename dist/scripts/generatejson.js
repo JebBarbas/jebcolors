@@ -18,7 +18,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 // Import the colors and file
 var colors = __importStar(require("../colors"));
 var gradients = __importStar(require("../gradients"));

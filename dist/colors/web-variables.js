@@ -1,8 +1,19 @@
 "use strict";
 // In this module I save all the web colors
 // src = https://en.wikipedia.org/wiki/Web_colors
-exports.__esModule = true;
-exports.webMainColors = void 0;
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports._webMainColorsMixedKeys_ONLY_TO_INTERN_USE = exports.webMainColors = void 0;
 // Final color variables
 // Pinks
 var mediumVioletRed = "#c71585";
@@ -298,6 +309,165 @@ exports.webMainColors = {
     darkGray: darkGray,
     silver: silver,
     lightGray: lightGray,
-    gainsboro: gainsboro
+    gainsboro: gainsboro,
 };
+/**
+ * This color group SHOULDN'T be exported to index, this is only to the css() function, but if you see this
+ * means that the keys are lowercased.
+ * @example
+ * lightSlateGray -> lightslategray
+ * @deprecated
+ * Please don't use this variable in your proyect, this is for the internal use of the css() function
+ */
+var _webMainColorsLowercased_ONLY_TO_INTERN_USE = {
+    mediumvioletred: mediumVioletRed,
+    deeppink: deepPink,
+    palevioletred: paleVioletRed,
+    hotpink: hotPink,
+    lightpink: lightPink,
+    pink: pink,
+    darkred: darkRed,
+    red: red,
+    firebrick: firebrick,
+    crimson: crimson,
+    indianred: indianRed,
+    lightcoral: lightCoral,
+    salmon: salmon,
+    darksalmon: darkSalmon,
+    lightsalmon: lightSalmon,
+    orangered: orangeRed,
+    tomato: tomato,
+    darkorange: darkOrange,
+    coral: coral,
+    orange: orange,
+    darkkhaki: darkKhaki,
+    gold: gold,
+    khaki: khaki,
+    peachpuff: peachPuff,
+    yellow: yellow,
+    palegoldenrod: paleGoldenrod,
+    moccasin: moccasin,
+    papayawhip: papayaWhip,
+    lightgoldenrodyellow: lightGoldenrodYellow,
+    lemonchiffon: lemonChiffon,
+    lightyellow: lightYellow,
+    maroon: maroon,
+    brown: brown,
+    saddlebrown: saddleBrown,
+    sienna: sienna,
+    chocolate: chocolate,
+    darkgoldenrod: darkGoldenrod,
+    peru: peru,
+    rosybrown: rosyBrown,
+    goldenrod: goldenrod,
+    sandybrown: sandyBrown,
+    tan: tan,
+    burlywood: burlywood,
+    wheat: wheat,
+    navajowhite: navajoWhite,
+    bisque: bisque,
+    blanchedalmond: blanchedAlmond,
+    cornsilk: cornsilk,
+    darkgreen: darkGreen,
+    green: green,
+    darkolivegreen: darkOliveGreen,
+    forestgreen: forestGreen,
+    seagreen: seaGreen,
+    olive: olive,
+    olivedrab: oliveDrab,
+    mediumseagreen: mediumSeaGreen,
+    limegreen: limeGreen,
+    lime: lime,
+    springgreen: springGreen,
+    mediumspringgreen: mediumSpringGreen,
+    darkseagreen: darkSeaGreen,
+    mediumaquamarine: mediumAquamarine,
+    yellowgreen: yellowGreen,
+    lawngreen: lawnGreen,
+    chartreuse: chartreuse,
+    lightgreen: lightGreen,
+    greenyellow: greenYellow,
+    palegreen: paleGreen,
+    teal: teal,
+    darkcyan: darkCyan,
+    lightseagreen: lightSeaGreen,
+    cadetblue: cadetBlue,
+    darkturquoise: darkTurquoise,
+    mediumturquoise: mediumTurquoise,
+    turquoise: turquoise,
+    aqua: aqua,
+    cyan: cyan,
+    aquamarine: aquamarine,
+    paleturquoise: paleTurquoise,
+    lightcyan: lightCyan,
+    navy: navy,
+    darkblue: darkBlue,
+    mediumblue: mediumBlue,
+    blue: blue,
+    midnightblue: midnightBlue,
+    royalblue: royalBlue,
+    steelblue: steelBlue,
+    dodgerblue: dodgerBlue,
+    deepskyblue: deepSkyBlue,
+    cornflowerblue: cornflowerBlue,
+    skyblue: skyBlue,
+    lightskyblue: lightSkyBlue,
+    lightsteelblue: lightSteelBlue,
+    lightblue: lightBlue,
+    powderblue: powderBlue,
+    indigo: indigo,
+    purple: purple,
+    darkmagenta: darkMagenta,
+    darkviolet: darkViolet,
+    darkslateblue: darkSlateBlue,
+    blueviolet: blueViolet,
+    darkorchid: darkOrchid,
+    fuchsia: fuchsia,
+    magenta: magenta,
+    slateblue: slateBlue,
+    mediumslateblue: mediumSlateBlue,
+    mediumorchid: mediumOrchid,
+    mediumpurple: mediumPurple,
+    orchid: orchid,
+    violet: violet,
+    plum: plum,
+    thistle: thistle,
+    lavender: lavender,
+    rebeccapurple: rebeccaPurple,
+    mistyrose: mistyRose,
+    antiquewhite: antiqueWhite,
+    linen: linen,
+    beige: beige,
+    whitesmoke: whiteSmoke,
+    lavenderblush: lavenderBlush,
+    oldlace: oldLace,
+    aliceblue: aliceBlue,
+    seashell: seashell,
+    ghostwhite: ghostWhite,
+    honeydew: honeydew,
+    floralwhite: floralWhite,
+    azure: azure,
+    mintcream: mintCream,
+    snow: snow,
+    ivory: ivory,
+    white: white,
+    black: black,
+    darkslategray: darkSlateGray,
+    dimgray: dimGray,
+    slategray: slateGray,
+    gray: gray,
+    lightslategray: lightSlateGray,
+    darkgray: darkGray,
+    silver: silver,
+    lightgray: lightGray,
+    gainsboro: gainsboro,
+};
+/**
+ * Mix of webMainColors and _webMainColorsLowercased (to handle keys better:) )
+ * @example
+ * You can find light blue color either as lightblue or lightBlue
+ * @deprecated
+ * Please don't use this variable in your proyect, is just for internal use of css() function
+ */
+exports._webMainColorsMixedKeys_ONLY_TO_INTERN_USE = __assign(__assign({}, _webMainColorsLowercased_ONLY_TO_INTERN_USE), exports.webMainColors);
 //# sourceMappingURL=web-variables.js.map

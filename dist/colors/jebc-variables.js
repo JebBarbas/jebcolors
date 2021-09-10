@@ -1,7 +1,7 @@
 "use strict";
 // In this module I save my own colors
 // src = https://cdn.jsdelivr.net/gh/jebbarbas/bootstrap-plus@1.0.0/bsp.css
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.jebcUnusedColors = exports.jebcMainColors = void 0;
 // Color variables
 var purple = "#ae42bd";
@@ -74,7 +74,7 @@ exports.jebcMainColors = {
     chocolate: chocolate,
     elegant: elegant,
     silver: silver,
-    sidra: sidra
+    sidra: sidra,
 };
 exports.jebcUnusedColors = {
     midnightGreen: midnightGreen,
@@ -90,6 +90,6 @@ exports.jebcUnusedColors = {
     blue2: blue2,
     yellow: yellow,
     coral2: coral2,
-    gold: gold
+    gold: gold,
 };
 //# sourceMappingURL=jebc-variables.js.map

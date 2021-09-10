@@ -1,14 +1,15 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/ban-types */
 // Testing module
 
 // First, import all the thing to work correctly
 import { ok } from 'assert'
-import { isValid } from '../functions'
 import { info, warning, error, success, enter } from '../functions/logs'
+import { Color, Gradient, supercolor, supergradient } from '../classes'
 
 // Import the colors
 import * as colors from '../colors'
 import * as gradients from '../gradients'
-import * as functions from '../functions'
 
 // Types
 type color = string
@@ -22,12 +23,18 @@ type gradientGroupEntry = [string, gradient]
 // Function to maintain the code cleaner
 const entries = (object:object):[string, any][] => Object.entries(object)
 
+// Function to exclude keys that I don't want to test
+const isBadKey = (key:string):boolean => {
+    const badKeys = ['__esModule','default']
+    return badKeys.includes(key)
+}
+
 // TEST COLORS
 const testColors = ():boolean => {
     // For saving total colors and total errors
     let globalTotalColors = 0
     let globalTotalBadColors = 0
-    let colorGroupsWithError:string[] = []
+    const colorGroupsWithError:string[] = []
 
     info('Starting Color Tests ...')
     enter()
@@ -35,8 +42,7 @@ const testColors = ():boolean => {
     entries(colors).forEach((entry:colorsEntry) => {
         const [colorGroupKey, colorGroup] = entry
 
-        // If the gradientGroup its __esModule (a boolean), enters here
-        if(typeof colorGroup === 'boolean'){
+        if(isBadKey(colorGroupKey)){
             return
         }
 
@@ -51,7 +57,7 @@ const testColors = ():boolean => {
             localTotalColors++
             globalTotalColors++
             
-            if(!isValid(color,'hexCode')){
+            if(!Color.test(color).valid){
                 error(`Found error in color ${colorKey}`)
                 localTotalBadColors++
                 globalTotalBadColors++
@@ -84,7 +90,7 @@ const testGradients = ():boolean => {
     // For saving total gradients and total errors
     let globalTotalGradients = 0
     let globalTotalBadGradients = 0
-    let gradientGroupsWithError:string[] = []
+    const gradientGroupsWithError:string[] = []
 
     enter()
     info('Starting Gradient Tests ...')
@@ -93,8 +99,7 @@ const testGradients = ():boolean => {
     entries(gradients).forEach((entry:gradientsEntry) => {
         const [gradientGroupKey, gradientGroup] = entry
 
-        // If the gradientGroup its __esModule (a boolean), enters here
-        if(typeof gradientGroup === 'boolean'){
+        if(isBadKey(gradientGroupKey)){
             return
         }
 
@@ -111,7 +116,7 @@ const testGradients = ():boolean => {
             
             let errorExists = false
             gradient.forEach(color => {
-                if(!isValid(color,'hexCode')){
+                if(!Color.test(color).valid){
                     error(`Found error in gradient ${gradientKey} in color ${color}`)
 
                     if(!errorExists){
@@ -145,69 +150,30 @@ const testGradients = ():boolean => {
 }
 
 // TEST FUNCTIONS
-// As every function is different, you'll need to execute all of them, if some function returns an error, then the 
-// catch block will return false, otherwise return true at the end
-const testFunctions = ():boolean => {
+const testClasses = ():boolean => {
     try{
         enter()
-        info('Starting Functions Tests ...')
-        enter()
-        // Some functions apply others in ladder, so use it to test a lot of functions at once
+        info('Testing Color and Gradient (random and seed)')
 
-        /*
-            light
-                getRGB (getRedValue, getGreenValue, getBlue)
-                    fixHexCode
-                        isValid
-                        clean
-        */
-        info('Testing: light, getRedValue, getGreenValue, getBlueValue, fixHexCode, isValidHexCode, clean ...')
-        success(functions.light("#cc0000",1.2))
-        enter()
+        success('Random color:', Color.random().code)
+        success('Seeded color:', Color.seed('jebcolors').code)
 
-        /*
-            deg
-            hsl
-                normalizeHSLValue
-                    normalize
-                hslToRgb
-                rgb
-                    normalizeColorValue
-        */
-        info('Testing deg, hsl, normalizeHSLValue, normalize, hslToRgb, rgb, normalizeColorValue ...')
-        success(functions.hsl(functions.deg(180),1,0.5))
-        enter()
+        success('Random gradient:', Gradient.random().codes)
+        success('Seeded gradient:', Gradient.seed('jebcolors').codes)
 
-        /*
-            isDarkColor
-                contrastText
-                    getRelativeLuminance
-        */
-        info('Testing isDarkColor, contrastText, getRelativeLuminance ...')
-        success(functions.isDarkColor("#cc0000").toString())
         enter()
+        info('Tesing supercolor and supergradient with css colors')
 
-        /*
-            percentage
-        */
-        info('Testing percentage ...')
-        success(functions.percentage(100).toString())
-        enter()
+        success(supercolor('darkred').code)
+        success(supergradient(['red','orange','yellow']).codes)
 
-        /*
-            rgbToHsl
-        */
-        info('Testing rgbToHsl ...')
-        success(functions.rgbToHsl(255,255,255).toString())
-        enter()
-
-        success('All functions passed the test')
         return true
     }
-    catch{
+    catch(err){
+        error('Error testing classes', err)
         return false
     }
 }
 
-ok(testColors() && testGradients() && testFunctions())
+ok(testColors() && testGradients() && testClasses())
 

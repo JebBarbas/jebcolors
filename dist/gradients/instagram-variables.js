@@ -1,6 +1,6 @@
 "use strict";
 // Here are stored the gradients that Instagram uses when you create a history
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.instagramMainGradients = void 0;
 // Final gradients
 var instagram = ["#b92bcd", "#fa8a36"];
@@ -16,6 +16,6 @@ exports.instagramMainGradients = {
     green: green,
     red: red,
     pink: pink,
-    rainbow: rainbow
+    rainbow: rainbow,
 };
 //# sourceMappingURL=instagram-variables.js.map

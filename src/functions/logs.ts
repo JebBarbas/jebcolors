@@ -1,6 +1,3 @@
-// Module to display in console with some color centain information
-
-// Imports
 import 'colors'
 
 // Default Values
@@ -12,26 +9,28 @@ const icons = {
 }
 
 // Exports
-export const info = (text:string) => {
-    const log = `${icons.info} ${text}`.blue
-    console.log(log)
+export const info = (...text:unknown[]):void => {
+    const log = (`${icons.info} ${text.join(' ')}`).blue;
+    console.log(log);
 }
 
-export const warning = (text:string) => {
-    const log = `${icons.warning} ${text}`.yellow
-    console.log(log)
+export const warning = (...text:unknown[]):void => {
+    const log = (`${icons.warning} ${text.join(' ')}`).yellow;
+    console.log(log);
 }
 
-export const error = (text:string) => {
-    const log = `${icons.error} ${text}`.red
-    console.log(log)
+export const error = (...text:unknown[]):void => {
+    const log = (`${icons.error} ${text.join(' ')}`).red;
+    console.log(log);
 }
 
-export const success = (text:string) => {
-    const log = `${icons.success} ${text}`.green
-    console.log(log)
+export const success = (...text:unknown[]):void => {
+    const log = (`${icons.success} ${text.join(' ')}`).green;
+    console.log(log);
 }
 
-export const enter = () => {
+export const enter = ():void => {
     console.log('')
 }
+
+//# sourceMappingURL=logs.js.map

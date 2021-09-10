@@ -1,61 +1,45 @@
 "use strict";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-var-requires */
 // Principal module that exports all things
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-exports.__esModule = true;
-exports.uiMainGradients = exports.instagramMainGradients = exports.grabientMainGradients = exports.averageColor = exports.getRelativeLuminance = exports.contrastTest = exports.getRGB = exports.validationRegex = exports.isDarkColor = exports.isValid = exports.rgbToHsl = exports.rgb = exports.percentage = exports.normalizeHSLValue = exports.normalizeColorValue = exports.normalize = exports.light = exports.isValidHexCode = exports.hslToRgb = exports.hsl = exports.getRedValue = exports.getGreenValue = exports.getBlueValue = exports.fixHexCode = exports.deg = exports.clean = exports.webMainColors = exports.socialMainColors = exports.languageMainColors = exports.jebcUnusedColors = exports.jebcMainColors = exports.consoleMainColors = exports.bootstrapUnusedColors = exports.bootstrapMainColors = exports.bootstrapGrayColors = void 0;
-// Imports
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.upgradecolor = exports.megacolor = exports.supergradient = exports.supercolor = exports.GradientableColor = exports.Gradient = exports.Color = exports.uiMainGradients = exports.instagramMainGradients = exports.grabientMainGradients = exports.webMainColors = exports.socialMainColors = exports.languageMainColors = exports.jebcUnusedColors = exports.jebcMainColors = exports.consoleMainColors = exports.bootstrapUnusedColors = exports.bootstrapMainColors = exports.bootstrapGrayColors = void 0;
+// COLORS START //
 var colors_1 = require("./colors");
-__createBinding(exports, colors_1, "bootstrapGrayColors");
-__createBinding(exports, colors_1, "bootstrapMainColors");
-__createBinding(exports, colors_1, "bootstrapUnusedColors");
-__createBinding(exports, colors_1, "consoleMainColors");
-__createBinding(exports, colors_1, "jebcMainColors");
-__createBinding(exports, colors_1, "jebcUnusedColors");
-__createBinding(exports, colors_1, "languageMainColors");
-__createBinding(exports, colors_1, "socialMainColors");
-__createBinding(exports, colors_1, "webMainColors");
-var functions_1 = require("./functions");
-__createBinding(exports, functions_1, "clean");
-__createBinding(exports, functions_1, "deg");
-__createBinding(exports, functions_1, "fixHexCode");
-__createBinding(exports, functions_1, "getBlueValue");
-__createBinding(exports, functions_1, "getGreenValue");
-__createBinding(exports, functions_1, "getRedValue");
-__createBinding(exports, functions_1, "hsl");
-__createBinding(exports, functions_1, "hslToRgb");
-__createBinding(exports, functions_1, "isValidHexCode");
-__createBinding(exports, functions_1, "light");
-__createBinding(exports, functions_1, "normalize");
-__createBinding(exports, functions_1, "normalizeColorValue");
-__createBinding(exports, functions_1, "normalizeHSLValue");
-__createBinding(exports, functions_1, "percentage");
-__createBinding(exports, functions_1, "rgb");
-__createBinding(exports, functions_1, "rgbToHsl");
-__createBinding(exports, functions_1, "isValid");
-__createBinding(exports, functions_1, "isDarkColor");
-__createBinding(exports, functions_1, "validationRegex");
-__createBinding(exports, functions_1, "getRGB");
-__createBinding(exports, functions_1, "contrastTest");
-__createBinding(exports, functions_1, "getRelativeLuminance");
-__createBinding(exports, functions_1, "averageColor");
+Object.defineProperty(exports, "bootstrapGrayColors", { enumerable: true, get: function () { return colors_1.bootstrapGrayColors; } });
+Object.defineProperty(exports, "bootstrapMainColors", { enumerable: true, get: function () { return colors_1.bootstrapMainColors; } });
+Object.defineProperty(exports, "bootstrapUnusedColors", { enumerable: true, get: function () { return colors_1.bootstrapUnusedColors; } });
+Object.defineProperty(exports, "consoleMainColors", { enumerable: true, get: function () { return colors_1.consoleMainColors; } });
+Object.defineProperty(exports, "jebcMainColors", { enumerable: true, get: function () { return colors_1.jebcMainColors; } });
+Object.defineProperty(exports, "jebcUnusedColors", { enumerable: true, get: function () { return colors_1.jebcUnusedColors; } });
+Object.defineProperty(exports, "languageMainColors", { enumerable: true, get: function () { return colors_1.languageMainColors; } });
+Object.defineProperty(exports, "socialMainColors", { enumerable: true, get: function () { return colors_1.socialMainColors; } });
+Object.defineProperty(exports, "webMainColors", { enumerable: true, get: function () { return colors_1.webMainColors; } });
+// COLORS END
+// GRADIENTS START
 var gradients_1 = require("./gradients");
-__createBinding(exports, gradients_1, "grabientMainGradients");
-__createBinding(exports, gradients_1, "instagramMainGradients");
-__createBinding(exports, gradients_1, "uiMainGradients");
+Object.defineProperty(exports, "grabientMainGradients", { enumerable: true, get: function () { return gradients_1.grabientMainGradients; } });
+Object.defineProperty(exports, "instagramMainGradients", { enumerable: true, get: function () { return gradients_1.instagramMainGradients; } });
+Object.defineProperty(exports, "uiMainGradients", { enumerable: true, get: function () { return gradients_1.uiMainGradients; } });
+// GRADIENTS END
+// COLOR CLASS START //
+var classes_1 = require("./classes");
+Object.defineProperty(exports, "Color", { enumerable: true, get: function () { return classes_1.Color; } });
+Object.defineProperty(exports, "Gradient", { enumerable: true, get: function () { return classes_1.Gradient; } });
+Object.defineProperty(exports, "GradientableColor", { enumerable: true, get: function () { return classes_1.GradientableColor; } });
+Object.defineProperty(exports, "supercolor", { enumerable: true, get: function () { return classes_1.supercolor; } });
+Object.defineProperty(exports, "supergradient", { enumerable: true, get: function () { return classes_1.supergradient; } });
+Object.defineProperty(exports, "megacolor", { enumerable: true, get: function () { return classes_1.megacolor; } });
+Object.defineProperty(exports, "upgradecolor", { enumerable: true, get: function () { return classes_1.upgradecolor; } });
+// COLOR CLASS END //
 if (typeof window !== 'undefined') {
     var colors = require('./colors');
     var gradients = require('./gradients');
-    var functions = require('./functions');
+    var superclasses = require('./classes');
     var jebcolors = {
         colors: colors,
         gradients: gradients,
-        functions: functions
+        superclasses: superclasses,
     };
     window.jebcolors = jebcolors;
 }

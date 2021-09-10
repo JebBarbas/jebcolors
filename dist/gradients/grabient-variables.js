@@ -1,7 +1,7 @@
 "use strict";
 // In this module I save arrays of colors getted of grabient (used in gradients)
 // src = https://www.grabient.com/
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.grabientMainGradients = void 0;
 // Final arrays
 var sweetOrange = ["#fbab7e", "#f7ce68"];
@@ -33,6 +33,6 @@ exports.grabientMainGradients = {
     magicOne: magicOne,
     magicTwo: magicTwo,
     magicThree: magicThree,
-    magicFour: magicFour
+    magicFour: magicFour,
 };
 //# sourceMappingURL=grabient-variables.js.map
